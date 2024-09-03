@@ -1,0 +1,8 @@
+
+Runner.pages.fieldsEvents["t_disposition_status_event"]=function(pageObj,pageid,row){if(row){row=new Runner.AjaxRow(pageObj,row);}
+var ret,reqParams,ctrl=this,fieldsData={},params={},ajax=new Runner.form.Button({id:'t_disposition_status_event',btnName:'t_disposition_status_event'}),before=function(){},after=function(result){var ctrltype=Runner.getControl(pageid,'t_disposition_status');if(ctrltype.getValue()=='8')
+{pageObj.toggleItem("integrated_edit_field4",false);}else
+{pageObj.toggleItem("integrated_edit_field4",true);}},submit=function(){params["table"]="m_disposition_inmail";params["field"]=ctrl.fieldName;params.page=pageObj.pageName;(Runner.controls.ControlStorage.byId(pageid)||[]).forEach(function(ctrl){if(!(ctrl instanceof Runner.controls.MultiUploadField)&&!(ctrl instanceof Runner.controls.FileControl)){fieldsData[ctrl.fieldName]=ctrl.getStringValue();}});reqParams={params:JSON.stringify(params),event:"t_disposition_status_event",pageType:pageObj.pageType,keys:JSON.stringify(pageObj.keys?pageObj.keys:(row&&row.getKeys())),fieldsData:JSON.stringify(fieldsData)};if(pageObj.masterTable){reqParams.masterTable=pageObj.masterTable;reqParams=Runner.apply(reqParams,pageObj.masterKeys);}
+$.post(Runner.getPageUrl("buttonhandler"),reqParams,function(result){var _result;try{_result=JSON.parse(result);}catch(e){Runner.displayGenericAjaxError(result);}
+after.call(ctrl,_result);}).fail(function(jqXHR,textStatus,errorThrown){Runner.displayGenericAjaxError(jqXHR.responseText||textStatus+' '+errorThrown);});submit=function(){};};ajax.submitHandler=submit;ajax.submit=submit;ret=before.call(this);if(ret===false){return;}
+submit();};

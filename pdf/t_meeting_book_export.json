@@ -1,0 +1,199 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel t_meeting_book export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$t_meeting_id_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$t_meeting_roomid_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$t_meeting_no_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$t_meeting_user_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$t_meeting_desc_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$t_meeting_from_date_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$t_meeting_to_date_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$t_meeting_from_time_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$t_meeting_to_time_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$user_participant_list_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$t_meeting_participant_type_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$t_meeting_total_participant_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$t_meeting_isminuman_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$t_meeting_issnack_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$t_meeting_ismakan_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$t_meeting_recurring_flag_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$t_meeting_status_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$add_user_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$add_date_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$edit_user_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$edit_date_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
+			{"text":{$fr_date_pdfvalue},"hidden":"{$item_hide_export_field21}"},
+				
+				
+			{"text":{$to_dt_pdfvalue},"hidden":"{$item_hide_export_field22}"},
+				
+				
+			{"text":{$fr_time_pdfvalue},"hidden":"{$item_hide_export_field23}"},
+				
+				
+			{"text":{$to_time_pdfvalue},"hidden":"{$item_hide_export_field24}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

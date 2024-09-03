@@ -1,0 +1,780 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_message}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section3',
+			widths: ['*'],
+			body: [
+				[{text: 'Out Mail, Edit Form', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section3_0}
+									"*", 
+								{END col_section3_0}
+															{BEGIN col_section3_1}
+									"*", 
+								{END col_section3_1}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section3_0}
+				[
+																{BEGIN cellblock_section3_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section4',
+			widths: ['*'],
+			body: [
+				[{text: 'Origin', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section4_0}
+									"*", 
+								{END col_section4_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section4_0}
+				[
+																{BEGIN cellblock_section4_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel t_delivery t_location_id }","bold":true},{"text":{$t_location_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section4_c1}
+											],
+				{END row_section4_0}
+						{BEGIN row_section4_1}
+				[
+																{BEGIN cellblock_section4_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel t_delivery t_delivery_location_address }","bold":true},{"text":{$t_delivery_location_address_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section4_c}
+											],
+				{END row_section4_1}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section5',
+			widths: ['*'],
+			body: [
+				[{text: 'Destination', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section5_0}
+									"*", 
+								{END col_section5_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section5_0}
+				[
+																{BEGIN cellblock_section5_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel t_delivery t_select_table_text }","bold":true},{"text":{$t_select_table_text_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section5_c1}
+											],
+				{END row_section5_0}
+						{BEGIN row_section5_1}
+				[
+																{BEGIN cellblock_section5_c2}
+{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel t_delivery t_delivery_to_text }","bold":true},{"text":{$t_delivery_to_text_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel t_delivery t_delivery_to_table }","bold":true},{"text":{$t_delivery_to_table_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"text":{$edit_t_delivery_to_table_pdfvalue},"hidden":"{$item_hide_integrated_edit_field11}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section5_c2}
+											],
+				{END row_section5_1}
+						{BEGIN row_section5_2}
+				[
+																{BEGIN cellblock_section5_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel t_delivery t_delivery_address }","bold":true},{"text":{$t_delivery_address_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section5_c}
+											],
+				{END row_section5_2}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section3_c1}
+																							{BEGIN cellblock_section3_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel t_delivery t_delivery_no }","bold":true},{"text":{$t_delivery_no_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel t_delivery t_delivery_date }","bold":true},{"text":{$t_delivery_date_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel t_delivery t_delivery_type }","bold":true},{"text":{$t_delivery_type_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel t_delivery t_delivery_desc }","bold":true},{"text":{$t_delivery_desc_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel t_delivery t_delivery_status }","bold":true},{"text":{$t_delivery_status_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field13}","stack":[{"text":"{$jslabel t_delivery edit_user }","bold":true},{"text":{$edit_user_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section3_c}
+											],
+				{END row_section3_0}
+						{BEGIN row_section3_1}
+				[
+																{BEGIN cellblock_section3_c2}
+{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_section3_c2}
+			colSpan: {$colspan_section3_c2},
+			{END colspan_section3_c2}
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section1',
+			widths: ['*'],
+			body: [
+				[{text: 'Detail Parameter', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section1_0}
+									"*", 
+								{END col_section1_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section1_0}
+				[
+																{BEGIN cellblock_section1_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_t_delivery_details}
+			{$displayDetailTable_t_delivery_details }
+		{END details_t_delivery_details},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section1_c1}
+											],
+				{END row_section1_0}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section3_c2}
+																		{ 
+				cellId: 'c2',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+				{END row_section3_1}
+						{BEGIN row_section3_2}
+				[
+																{BEGIN cellblock_section3_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_section3_c3}
+			colSpan: {$colspan_section3_c3},
+			{END colspan_section3_c3}
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section',
+			widths: ['*'],
+			body: [
+				[{text: 'Disposition', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section_0}
+									"*", 
+								{END col_section_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section_0}
+				[
+																{BEGIN cellblock_section_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_m_disposition_inmail}
+			{$displayDetailTable_m_disposition_inmail }
+		{END details_m_disposition_inmail},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c1}
+											],
+				{END row_section_0}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section3_c3}
+																		{ 
+				cellId: 'c3',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+				{END row_section3_2}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_save}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_close}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+}
+  

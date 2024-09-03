@@ -1,0 +1,656 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel t_register search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN t_register_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="t_register_id" data-fieldname="t_register_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_id}">
+		{$label t_register t_register_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_id}
+	</div>
+	<div class="r-search-field">
+		{$t_register_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_id_fieldblock}
+											
+{BEGIN t_register_id_x_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_id_x}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_id_x{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="t_register_id_x" data-fieldname="t_register_id_x" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_id_x}">
+		{$label t_register t_register_id_x }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_id_x}
+	</div>
+	<div class="r-search-field">
+		{$t_register_id_x_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_id_x_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_id_x_fieldblock}
+											
+{BEGIN t_register_no_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_no}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_no{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="t_register_no" data-fieldname="t_register_no" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_no}">
+		{$label t_register t_register_no }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_no}
+	</div>
+	<div class="r-search-field">
+		{$t_register_no_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_no_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_no_fieldblock}
+											
+{BEGIN t_register_date_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_date}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_date{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="t_register_date" data-fieldname="t_register_date" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_date}">
+		{$label t_register t_register_date }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_date}
+	</div>
+	<div class="r-search-field">
+		{$t_register_date_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_date_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_date_fieldblock}
+											
+{BEGIN t_register_source_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_source}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_source{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="t_register_source" data-fieldname="t_register_source" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_source}">
+		{$label t_register t_register_source }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_source}
+	</div>
+	<div class="r-search-field">
+		{$t_register_source_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_source_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_source_fieldblock}
+											
+{BEGIN t_register_location_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_location_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_location_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="t_register_location_id" data-fieldname="t_register_location_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_location_id}">
+		{$label t_register t_register_location_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_location_id}
+	</div>
+	<div class="r-search-field">
+		{$t_register_location_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_location_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_location_id_fieldblock}
+											
+{BEGIN t_register_transfer_fl_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_transfer_fl}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_transfer_fl{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="t_register_transfer_fl" data-fieldname="t_register_transfer_fl" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_transfer_fl}">
+		{$label t_register t_register_transfer_fl }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_transfer_fl}
+	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_fl_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_fl_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_transfer_fl_fieldblock}
+											
+{BEGIN t_register_transfer_location_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_transfer_location_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_transfer_location_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="t_register_transfer_location_id" data-fieldname="t_register_transfer_location_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_transfer_location_id}">
+		{$label t_register t_register_transfer_location_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_transfer_location_id}
+	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_location_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_location_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_transfer_location_id_fieldblock}
+											
+{BEGIN t_register_transfer_date_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_transfer_date}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_transfer_date{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="t_register_transfer_date" data-fieldname="t_register_transfer_date" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_transfer_date}">
+		{$label t_register t_register_transfer_date }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_transfer_date}
+	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_date_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_date_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_transfer_date_fieldblock}
+											
+{BEGIN t_register_transfer_courier_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_transfer_courier}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_transfer_courier{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="t_register_transfer_courier" data-fieldname="t_register_transfer_courier" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_transfer_courier}">
+		{$label t_register t_register_transfer_courier }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_transfer_courier}
+	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_courier_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_transfer_courier_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_transfer_courier_fieldblock}
+											
+{BEGIN t_register_doc_from_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_doc_from}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_doc_from{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="t_register_doc_from" data-fieldname="t_register_doc_from" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_doc_from}">
+		{$label t_register t_register_doc_from }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_doc_from}
+	</div>
+	<div class="r-search-field">
+		{$t_register_doc_from_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_doc_from_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_doc_from_fieldblock}
+											
+{BEGIN t_register_doc_owner_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_doc_owner}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_doc_owner{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="t_register_doc_owner" data-fieldname="t_register_doc_owner" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_doc_owner}">
+		{$label t_register t_register_doc_owner }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_doc_owner}
+	</div>
+	<div class="r-search-field">
+		{$t_register_doc_owner_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_doc_owner_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_doc_owner_fieldblock}
+											
+{BEGIN t_register_images_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_images}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_images{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="t_register_images" data-fieldname="t_register_images" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_images}">
+		{$label t_register t_register_images }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_images}
+	</div>
+	<div class="r-search-field">
+		{$t_register_images_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_images_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_images_fieldblock}
+											
+{BEGIN t_register_note_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_note}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_note{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="t_register_note" data-fieldname="t_register_note" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_note}">
+		{$label t_register t_register_note }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_note}
+	</div>
+	<div class="r-search-field">
+		{$t_register_note_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_note_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_note_fieldblock}
+											
+{BEGIN t_register_status_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_register_status}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_register_status{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="t_register_status" data-fieldname="t_register_status" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_register_status}">
+		{$label t_register t_register_status }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_register_status}
+	</div>
+	<div class="r-search-field">
+		{$t_register_status_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_register_status_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_register_status_fieldblock}
+											
+{BEGIN add_user_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_add_user}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="add_user{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="add_user" data-fieldname="add_user" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_add_user}">
+		{$label t_register add_user }	</label>
+	<div class="r-search-option">
+		{$searchtype_add_user}
+	</div>
+	<div class="r-search-field">
+		{$add_user_editcontrol}	</div>
+	<div class="r-search-field">
+		{$add_user_editcontrol1}
+	</div>
+	
+</div>
+
+{END add_user_fieldblock}
+											
+{BEGIN add_date_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_add_date}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="add_date{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="add_date" data-fieldname="add_date" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_add_date}">
+		{$label t_register add_date }	</label>
+	<div class="r-search-option">
+		{$searchtype_add_date}
+	</div>
+	<div class="r-search-field">
+		{$add_date_editcontrol}	</div>
+	<div class="r-search-field">
+		{$add_date_editcontrol1}
+	</div>
+	
+</div>
+
+{END add_date_fieldblock}
+											
+{BEGIN edit_user_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_edit_user}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="edit_user{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="edit_user" data-fieldname="edit_user" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_edit_user}">
+		{$label t_register edit_user }	</label>
+	<div class="r-search-option">
+		{$searchtype_edit_user}
+	</div>
+	<div class="r-search-field">
+		{$edit_user_editcontrol}	</div>
+	<div class="r-search-field">
+		{$edit_user_editcontrol1}
+	</div>
+	
+</div>
+
+{END edit_user_fieldblock}
+											
+{BEGIN edit_date_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_edit_date}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="edit_date{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="edit_date" data-fieldname="edit_date" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_edit_date}">
+		{$label t_register edit_date }	</label>
+	<div class="r-search-option">
+		{$searchtype_edit_date}
+	</div>
+	<div class="r-search-field">
+		{$edit_date_editcontrol}	</div>
+	<div class="r-search-field">
+		{$edit_date_editcontrol1}
+	</div>
+	
+</div>
+
+{END edit_date_fieldblock}
+											
+{BEGIN nomor_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nomor}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="nomor{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field19" {$item_integrated_search_field19} data-pageid="{$pageid}" data-field="nomor" data-fieldname="nomor" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_nomor}">
+		{$label t_register nomor }	</label>
+	<div class="r-search-option">
+		{$searchtype_nomor}
+	</div>
+	<div class="r-search-field">
+		{$nomor_editcontrol}	</div>
+	<div class="r-search-field">
+		{$nomor_editcontrol1}
+	</div>
+	
+</div>
+
+{END nomor_fieldblock}
+											
+{BEGIN digit_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_digit}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="digit{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field20" {$item_integrated_search_field20} data-pageid="{$pageid}" data-field="digit" data-fieldname="digit" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_digit}">
+		{$label t_register digit }	</label>
+	<div class="r-search-option">
+		{$searchtype_digit}
+	</div>
+	<div class="r-search-field">
+		{$digit_editcontrol}	</div>
+	<div class="r-search-field">
+		{$digit_editcontrol1}
+	</div>
+	
+</div>
+
+{END digit_fieldblock}
+											
+{BEGIN sign_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sign}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="sign{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="sign" data-fieldname="sign" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_sign}">
+		{$label t_register sign }	</label>
+	<div class="r-search-option">
+		{$searchtype_sign}
+	</div>
+	<div class="r-search-field">
+		{$sign_editcontrol}	</div>
+	<div class="r-search-field">
+		{$sign_editcontrol1}
+	</div>
+	
+</div>
+
+{END sign_fieldblock}
+											
+{BEGIN add_sign_user_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_add_sign_user}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="add_sign_user{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field22" {$item_integrated_search_field22} data-pageid="{$pageid}" data-field="add_sign_user" data-fieldname="add_sign_user" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_add_sign_user}">
+		{$label t_register add_sign_user }	</label>
+	<div class="r-search-option">
+		{$searchtype_add_sign_user}
+	</div>
+	<div class="r-search-field">
+		{$add_sign_user_editcontrol}	</div>
+	<div class="r-search-field">
+		{$add_sign_user_editcontrol1}
+	</div>
+	
+</div>
+
+{END add_sign_user_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

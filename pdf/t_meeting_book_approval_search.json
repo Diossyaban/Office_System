@@ -1,0 +1,300 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel t_meeting_book_approval search}","hidden":"{$item_hide_search_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":{$t_meeting_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$t_meeting_roomid_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$t_meeting_no_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$t_meeting_user_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$t_meeting_desc_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$t_meeting_from_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$t_meeting_to_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$user_participant_list_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$t_meeting_participant_type_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$t_meeting_total_participant_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$t_meeting_isminuman_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$t_meeting_issnack_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$t_meeting_ismakan_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$t_meeting_recurring_flag_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$t_meeting_status_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$fr_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$to_dt_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$fr_time_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$to_time_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
+				
+			{"text":{$meet_approve_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_cancel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+}
+  

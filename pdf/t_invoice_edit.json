@@ -1,0 +1,872 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_message}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+								{BEGIN row_grid_1}
+						
+			"%",
+						{END row_grid_1}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section',
+			widths: ['*'],
+			body: [
+				[{text: 'Invoice, Edit Form', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section_0}
+									"*", 
+								{END col_section_0}
+															{BEGIN col_section_1}
+									"*", 
+								{END col_section_1}
+															{BEGIN col_section_2}
+									"*", 
+								{END col_section_2}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section_0}
+				[
+																{BEGIN cellblock_section_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel t_invoice invoice_no }","bold":true},{"text":{$invoice_no_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel t_invoice invoice_type }","bold":true},{"text":{$invoice_type_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel t_invoice invoice_term }","bold":true},{"text":{$invoice_term_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel t_invoice invoice_due_date }","bold":true},{"text":{$invoice_due_date_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c1}
+																							{BEGIN cellblock_section_c2}
+{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel t_invoice invoice_date }","bold":true},{"text":{$invoice_date_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel t_invoice invoice_currency }","bold":true},{"text":{$invoice_currency_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel t_invoice invoice_term_days }","bold":true},{"text":{$invoice_term_days_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c2}
+																							{BEGIN cellblock_section_c5}
+{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section2',
+			widths: ['*'],
+			body: [
+				[{text: 'To :', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section2_0}
+									"*", 
+								{END col_section2_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section2_0}
+				[
+																{BEGIN cellblock_section2_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":{$invoice_to_pdfvalue},"hidden":"{$item_hide_integrated_edit_field3}"},
+				
+				
+			{"text":{$invoice_address_pdfvalue},"hidden":"{$item_hide_integrated_edit_field8}"},
+				
+				
+			{"text":{$invoice_mobile_no_pdfvalue},"hidden":"{$item_hide_integrated_edit_field9}"},
+				
+				
+			{"text":{$invoice_email_pdfvalue},"hidden":"{$item_hide_integrated_edit_field13}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section2_c}
+											],
+				{END row_section2_0}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c5}
+											],
+				{END row_section_0}
+						{BEGIN row_section_1}
+				[
+																{BEGIN cellblock_section_c16}
+{
+	cellId: 'c16',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_section_c16}
+			colSpan: {$colspan_section_c16},
+			{END colspan_section_c16}
+		
+						
+	
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section1',
+			widths: ['*'],
+			body: [
+				[{text: '', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+															{BEGIN col_section1_0}
+									"*", 
+								{END col_section1_0}
+							 						
+						],
+						body: [
+								
+				{BEGIN row_section1_0}
+				[
+																{BEGIN cellblock_section1_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_t_invoice_det}
+			{$displayDetailTable_t_invoice_det }
+		{END details_t_invoice_det},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section1_c1}
+											],
+				{END row_section1_0}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c16}
+																		{ 
+				cellId: 'c16',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'c16',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
+				{END row_section_1}
+						{BEGIN row_section_2}
+				[
+																{BEGIN cellblock_section_c}
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c}
+																							{BEGIN cellblock_section_c18}
+{
+	cellId: 'c18',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c18}
+																							{BEGIN cellblock_section_c20}
+{
+	cellId: 'c20',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel t_invoice invoice_original_currency }","hidden":"{$item_hide_edit_field_label2}","bold":true},
+				
+				
+			{"text":{$invoice_original_currency_pdfvalue},"hidden":"{$item_hide_integrated_edit_field14}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+{END cellblock_section_c20}
+											],
+				{END row_section_2}
+						{BEGIN row_section_3}
+				[
+																{BEGIN cellblock_section_c13}
+{
+	cellId: 'c13',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+					{BEGIN rowspan_section_c13}
+			rowSpan: {$rowspan_section_c13},
+			{END rowspan_section_c13}
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c13}
+																							{BEGIN cellblock_section_c14}
+{
+	cellId: 'c14',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+					{BEGIN rowspan_section_c14}
+			rowSpan: {$rowspan_section_c14},
+			{END rowspan_section_c14}
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+{END cellblock_section_c14}
+																							{BEGIN cellblock_section_c15}
+{
+	cellId: 'c15',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel t_invoice invoice_disc }","hidden":"{$item_hide_edit_field_label}","bold":true},
+				
+				
+			{"text":{$invoice_disc_perc_pdfvalue},"hidden":"{$item_hide_integrated_edit_field5}"},
+				
+				
+			{"text":{$invoice_disc_pdfvalue},"hidden":"{$item_hide_integrated_edit_field10}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+{END cellblock_section_c15}
+											],
+				{END row_section_3}
+						{BEGIN row_section_4}
+				[
+											{ 
+				cellId: 'c13',
+				row:  1,
+				col:  0,
+				text: ''
+			},
+														{ 
+				cellId: 'c14',
+				row:  1,
+				col:  0,
+				text: ''
+			},
+																			{BEGIN cellblock_section_c17}
+{
+	cellId: 'c17',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel t_invoice invoice_tax }","hidden":"{$item_hide_edit_field_label1}","bold":true},
+				
+				
+			{"text":{$invoice_tax_perc_pdfvalue},"hidden":"{$item_hide_integrated_edit_field6}"},
+				
+				
+			{"text":{$invoice_tax_pdfvalue},"hidden":"{$item_hide_integrated_edit_field11}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+{END cellblock_section_c17}
+											],
+				{END row_section_4}
+						{BEGIN row_section_5}
+				[
+											{ 
+				cellId: 'c13',
+				row:  2,
+				col:  0,
+				text: ''
+			},
+														{ 
+				cellId: 'c14',
+				row:  2,
+				col:  0,
+				text: ''
+			},
+																			{BEGIN cellblock_section_c19}
+{
+	cellId: 'c19',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel t_invoice invoice_amount_nett }","hidden":"{$item_hide_edit_field_label3}","bold":true},
+				
+				
+			{"text":{$invoice_amount_nett_pdfvalue},"hidden":"{$item_hide_integrated_edit_field12}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+{END cellblock_section_c19}
+											],
+				{END row_section_5}
+		
+						]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_1}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_save}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_close}"},
+				
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+}
+  

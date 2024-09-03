@@ -1,0 +1,309 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel m_customer search}","hidden":"{$item_hide_search_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":{$m_customer_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$m_customer_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$m_customer_business_phone_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$m_customer_mobile_phone_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$m_customer_whatsApp_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$m_customer_email_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$m_customer_website_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$m_customer_billing_address_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$m_customer_billing_city_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$m_customer_billing_zipcode_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$m_customer_billing_province_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$m_customer_billing_country_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$m_customer_currency_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$m_customer_contact_fullname_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$m_customer_contact_position_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$m_customer_contact_email_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$m_customer_contact_mobile_phone_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$add_user_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$add_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
+				
+			{"text":{$edit_user_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
+				
+				
+			{"text":{$edit_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
+				
+				
+			{"text":{$m_customer_status_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
+				
+				
+			{"text":{$m_customer_no_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_cancel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+}
+  

@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent('t_letter',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){var ctrl=Runner.getControl(pageid,'t_letter_no');ctrl.setDisabled();var ctrladd_user=Runner.getControl(pageid,'add_user');ctrladd_user.setDisabled();var ctrlletter_ttgjwb=Runner.getControl(pageid,'letter_ttgjwb');ctrlletter_ttgjwb.setDisabled();var ctrlletter_status=Runner.getControl(pageid,'letter_status');ctrlletter_status.setDisabled();});

@@ -1,0 +1,370 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel t_delivery_address search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN t_delivery_address_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_delivery_address_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_delivery_address_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="t_delivery_address_id" data-fieldname="t_delivery_address_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_delivery_address_id}">
+		{$label t_delivery_address t_delivery_address_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_delivery_address_id}
+	</div>
+	<div class="r-search-field">
+		{$t_delivery_address_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_delivery_address_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_delivery_address_id_fieldblock}
+											
+{BEGIN t_delivery_address_to_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_delivery_address_to}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_delivery_address_to{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="t_delivery_address_to" data-fieldname="t_delivery_address_to" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_delivery_address_to}">
+		{$label t_delivery_address t_delivery_address_to }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_delivery_address_to}
+	</div>
+	<div class="r-search-field">
+		{$t_delivery_address_to_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_delivery_address_to_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_delivery_address_to_fieldblock}
+											
+{BEGIN t_delivery_address_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_t_delivery_address}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="t_delivery_address{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="t_delivery_address" data-fieldname="t_delivery_address" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_t_delivery_address}">
+		{$label t_delivery_address t_delivery_address }	</label>
+	<div class="r-search-option">
+		{$searchtype_t_delivery_address}
+	</div>
+	<div class="r-search-field">
+		{$t_delivery_address_editcontrol}	</div>
+	<div class="r-search-field">
+		{$t_delivery_address_editcontrol1}
+	</div>
+	
+</div>
+
+{END t_delivery_address_fieldblock}
+											
+{BEGIN m_provinsi_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_m_provinsi}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="m_provinsi{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="m_provinsi" data-fieldname="m_provinsi" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_m_provinsi}">
+		{$label t_delivery_address m_provinsi }	</label>
+	<div class="r-search-option">
+		{$searchtype_m_provinsi}
+	</div>
+	<div class="r-search-field">
+		{$m_provinsi_editcontrol}	</div>
+	<div class="r-search-field">
+		{$m_provinsi_editcontrol1}
+	</div>
+	
+</div>
+
+{END m_provinsi_fieldblock}
+											
+{BEGIN m_kabupaten_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_m_kabupaten}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="m_kabupaten{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="m_kabupaten" data-fieldname="m_kabupaten" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_m_kabupaten}">
+		{$label t_delivery_address m_kabupaten }	</label>
+	<div class="r-search-option">
+		{$searchtype_m_kabupaten}
+	</div>
+	<div class="r-search-field">
+		{$m_kabupaten_editcontrol}	</div>
+	<div class="r-search-field">
+		{$m_kabupaten_editcontrol1}
+	</div>
+	
+</div>
+
+{END m_kabupaten_fieldblock}
+											
+{BEGIN m_kecamatan_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_m_kecamatan}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="m_kecamatan{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="m_kecamatan" data-fieldname="m_kecamatan" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_m_kecamatan}">
+		{$label t_delivery_address m_kecamatan }	</label>
+	<div class="r-search-option">
+		{$searchtype_m_kecamatan}
+	</div>
+	<div class="r-search-field">
+		{$m_kecamatan_editcontrol}	</div>
+	<div class="r-search-field">
+		{$m_kecamatan_editcontrol1}
+	</div>
+	
+</div>
+
+{END m_kecamatan_fieldblock}
+											
+{BEGIN m_kelurahan_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_m_kelurahan}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="m_kelurahan{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="m_kelurahan" data-fieldname="m_kelurahan" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_m_kelurahan}">
+		{$label t_delivery_address m_kelurahan }	</label>
+	<div class="r-search-option">
+		{$searchtype_m_kelurahan}
+	</div>
+	<div class="r-search-field">
+		{$m_kelurahan_editcontrol}	</div>
+	<div class="r-search-field">
+		{$m_kelurahan_editcontrol1}
+	</div>
+	
+</div>
+
+{END m_kelurahan_fieldblock}
+											
+{BEGIN post_code_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_post_code}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="post_code{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="post_code" data-fieldname="post_code" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_post_code}">
+		{$label t_delivery_address post_code }	</label>
+	<div class="r-search-option">
+		{$searchtype_post_code}
+	</div>
+	<div class="r-search-field">
+		{$post_code_editcontrol}	</div>
+	<div class="r-search-field">
+		{$post_code_editcontrol1}
+	</div>
+	
+</div>
+
+{END post_code_fieldblock}
+											
+{BEGIN add_user_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_add_user}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="add_user{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="add_user" data-fieldname="add_user" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_add_user}">
+		{$label t_delivery_address add_user }	</label>
+	<div class="r-search-option">
+		{$searchtype_add_user}
+	</div>
+	<div class="r-search-field">
+		{$add_user_editcontrol}	</div>
+	<div class="r-search-field">
+		{$add_user_editcontrol1}
+	</div>
+	
+</div>
+
+{END add_user_fieldblock}
+											
+{BEGIN add_date_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_add_date}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="add_date{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="add_date" data-fieldname="add_date" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_add_date}">
+		{$label t_delivery_address add_date }	</label>
+	<div class="r-search-option">
+		{$searchtype_add_date}
+	</div>
+	<div class="r-search-field">
+		{$add_date_editcontrol}	</div>
+	<div class="r-search-field">
+		{$add_date_editcontrol1}
+	</div>
+	
+</div>
+
+{END add_date_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["btn_disposition"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='btn_disposition';if(!pageObj.buttonEventBefore['btn_disposition']){pageObj.buttonEventBefore['btn_disposition']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
+if(!pageObj.buttonEventAfter['btn_disposition']){pageObj.buttonEventAfter['btn_disposition']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;Runner.displayPopup({url:"m_disposition_inmail_add.php?mastertable=t_delivery&masterkey1="+result["CustomerID"]});}}
+$('a[id="btn_disposition"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="btn_disposition"+"_"+Runner.genId();var button_btn_disposition=new Runner.form.Button({id:this.id,btnName:"btn_disposition"});button_btn_disposition.init({args:[pageObj,proxy,pageid]});});};

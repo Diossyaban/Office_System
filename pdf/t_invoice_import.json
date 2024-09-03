@@ -1,0 +1,184 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel t_invoice import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$t_invoice_id_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$invoice_no_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$invoice_date_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$invoice_type_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$invoice_to_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$invoice_address_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$invoice_mobile_no_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$invoice_email_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$invoice_currency_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$invoice_exchange_rate_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$invoice_original_currency_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$invoice_disc_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$invoice_tax_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$invoice_amount_nett_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$invoice_idr_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$invoice_term_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$invoice_disc_perc_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$invoice_tax_perc_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$invoice_term_days_pdfvalue},"hidden":"{$item_hide_import_field19}"},
+				
+				
+			{"text":{$invoice_due_date_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

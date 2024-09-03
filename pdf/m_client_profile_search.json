@@ -1,0 +1,393 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel m_client_profile search}","hidden":"{$item_hide_search_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"text":{$id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$client_type_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$is_active_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$is_delete_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$deleted_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$client_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$domestic_type_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$overseas_type_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$client_gender_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$address_domicile_street_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$address_domicile_description_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$address_domicile_postal_code_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$address_domicile_region_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$address_domicile_city_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$address_domicile_province_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
+				
+			{"text":{$address_domicile_country_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
+				
+				
+			{"text":{$address_correspondence_street_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
+				
+				
+			{"text":{$address_correspondence_description_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
+				
+				
+			{"text":{$address_correspondence_postal_code_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
+				
+				
+			{"text":{$address_correspondence_region_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
+				
+				
+			{"text":{$address_correspondence_city_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field24}"},
+				
+				
+			{"text":{$address_correspondence_province_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
+				
+				
+			{"text":{$address_correspondence_country_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
+				
+				
+			{"text":{$establishment_place_pdfvalue},"hidden":"{$item_hide_integrated_search_field27}"},
+				
+				
+			{"text":{$establishment_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field28}"},
+				
+				
+			{"text":{$tax_number_pdfvalue},"hidden":"{$item_hide_integrated_search_field29}"},
+				
+				
+			{"text":{$tax_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field30}"},
+				
+				
+			{"text":{$id_card_number_pdfvalue},"hidden":"{$item_hide_integrated_search_field31}"},
+				
+				
+			{"text":{$id_card_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field32}"},
+				
+				
+			{"text":{$id_card_citizen_pdfvalue},"hidden":"{$item_hide_integrated_search_field33}"},
+				
+				
+			{"text":{$id_card_expired_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field34}"},
+				
+				
+			{"text":{$contact_pic_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field35}"},
+				
+				
+			{"text":{$contact_pic_number_pdfvalue},"hidden":"{$item_hide_integrated_search_field36}"},
+				
+				
+			{"text":{$bank_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field37}"},
+				
+				
+			{"text":{$bank_swift_code_pdfvalue},"hidden":"{$item_hide_integrated_search_field38}"},
+				
+				
+			{"text":{$bank_currency_pdfvalue},"hidden":"{$item_hide_integrated_search_field39}"},
+				
+				
+			{"text":{$bank_account_number_pdfvalue},"hidden":"{$item_hide_integrated_search_field40}"},
+				
+				
+			{"text":{$dob_place_pdfvalue},"hidden":"{$item_hide_integrated_search_field41}"},
+				
+				
+			{"text":{$dob_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field42}"},
+				
+				
+			{"text":{$referral_type_pdfvalue},"hidden":"{$item_hide_integrated_search_field43}"},
+				
+				
+			{"text":{$referral_partnership_pdfvalue},"hidden":"{$item_hide_integrated_search_field44}"},
+				
+				
+			{"text":{$referral_marketing_pdfvalue},"hidden":"{$item_hide_integrated_search_field45}"},
+				
+				
+			{"text":{$referral_employee_pdfvalue},"hidden":"{$item_hide_integrated_search_field46}"},
+				
+				
+			{"text":{$client_no_pdfvalue},"hidden":"{$item_hide_integrated_search_field47}"},
+				
+				
+			{"text":{$add_user_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$add_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$edit_user_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$edit_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$m_client_profilecol_pdfvalue},"hidden":"{$item_hide_integrated_search_field48}"},
+				
+				
+			{"text":{$last_user_pdfvalue},"hidden":"{$item_hide_integrated_search_field49}"},
+				
+				
+			{"text":{$last_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field50}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_cancel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+}
+  

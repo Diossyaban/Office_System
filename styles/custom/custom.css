@@ -1,0 +1,115 @@
+.r-vbar-page .r-left .navbar-brand {
+    color: #2780E3;
+    font-size: 16px;
+}
+
+.alert-warning {
+    background-color: #BC9C22;
+    border-color: #9d8426;
+    color: #fff;
+}
+
+.navbar-default {
+    background-color: #f3f6f9;
+    border-color: #f3f6f9;
+}
+
+.navbar-default {
+    background-color: #f3f6f9;
+    border-color: #f3f6f9;
+}
+r-left:not(.r-left-collapsed) .r-menu [data-menu-top], .r-left:not(.r-left-collapsed) .r-menu [data-menu-inline] {
+    padding: 0;
+    font-size: 16px;
+    padding: 4px 16px;
+    margin: 0px 8px;
+    margin-bottom: 4px;
+   
+}
+.btn-warning {
+    color: #1967be;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+.label-hitam {
+    background-color: #444;
+}
+.r-left .r-menu li.active.active.active > [data-menu-link] {
+    /* background: #ffdc03; */
+    color: #E1A730;
+}
+
+.r-vbar-page [data-menu-v][data-menu-inline][aria-expanded="true"] {
+    background-color: #343a40;
+    color: .r-vbar-page .r-left .navbar-brand {
+    color: #2780E3;
+    font-size: 16px;
+}
+
+.alert-warning {
+    background-color: #cff4fc;
+    border-color: #9eeaf9;
+    color: #282a35;
+}
+
+.navbar-default {
+    background-color: #f3f6f9;
+    border-color: #f3f6f9;
+}
+
+.navbar-default {
+    background-color: #f3f6f9;
+    border-color: #f3f6f9;
+}
+r-left:not(.r-left-collapsed) .r-menu [data-menu-top], .r-left:not(.r-left-collapsed) .r-menu [data-menu-inline] {
+    padding: 0;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: 0px 8px;
+    margin-bottom: 4px;
+   
+}
+.btn-warning {
+    color: #1967be;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+.label-hitam {
+    background-color: #444;
+}
+.r-left .r-menu li.active.active.active > [data-menu-link] {
+    /* background: #ffdc03; */
+    color: #E1A730;
+}
+
+.r-vbar-page [data-menu-v][data-menu-inline][aria-expanded="true"] {
+    background-color: #343a40;
+    color: #E1A730;
+}
+.btn-default {
+    color: #7b7171;
+    background-color: #ebe6e6;
+    border-color: #eeeeee;
+}
+
+
+;
+}
+.btn-default {
+    color: #7b7171;
+    background-color: #ebe6e6;
+    border-color: #eeeeee;
+}
+.btn-info {
+    color: #fff;
+    background-color: #BC9C22;
+    border-color: transparent;
+}
+.btn-info:hover, .btn-info:focus, .btn-group.open .dropdown-toggle.btn-primary {
+    background-color: #e7c235;
+    border-color: #b6a35d;
+}
+.panel-info > .panel-heading .btn.btn-info:not(:hover) {
+    background-color: #BC9C22;
+}
+

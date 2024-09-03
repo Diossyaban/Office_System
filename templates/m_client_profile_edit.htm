@@ -1,0 +1,2329 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-edit"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notifications			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		User Profile		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log out		
+		</a>
+	</li>
+{END logoutbutton}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<div data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END message_back_button}
+{BEGIN message_view_page_button}
+		<a class="btn btn-sm btn-default" href="" {$view_page_button_attrs}>View</a>
+{END message_view_page_button}
+</div>
+</div>
+			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section" {$item_section} data-pageid="{$pageid}" data-page="m_client_profile_edit">
+		<div class="panel-heading" role="tab" {$section_section1_headattrs} 
+			data-toggle="collapse"  
+
+				href="#section1{$pageid}" aria-expanded="true" aria-controls="section1"
+
+		>
+		  <h4 class="panel-title">
+		  				<a role="button" >
+				Client Information, Add New			</a>
+					  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel"  {$section_section1_attrs}
+
+				id="section1{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section" id="form_section_{$pageid}" data-makeup="leftbar" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section_0} >
+										
+
+{BEGIN cellblock_section_c16}
+<td
+	{$cell_section_c16}
+	class="r-align-left r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c16" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN client_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_client_name}  r-vertical-field" 
+	data-signal-error-for="client_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="client_name" data-fieldname="client_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_client_name}">
+		{BEGIN client_name_label}{$label m_client_profile client_name }{END client_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$client_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="client_name">
+		<div class="text-muted" >
+		{$tooltip m_client_profile client_name }		</div>
+	</div>
+</div>
+
+
+{END client_name_fieldblock}
+	
+								</td>
+			{END cellblock_section_c16}
+			 
+																
+
+{BEGIN cellblock_section_c18}
+<td
+	{$cell_section_c18}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c18" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN client_type_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_client_type}  r-vertical-field" 
+	data-signal-error-for="client_type{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="client_type" data-fieldname="client_type" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_client_type}">
+		{BEGIN client_type_label}{$label m_client_profile client_type }{END client_type_label}
+	</label>
+	<div class="r-edit-field">
+		{$client_type_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="client_type">
+		<div class="text-muted" >
+		{$tooltip m_client_profile client_type }		</div>
+	</div>
+</div>
+
+
+{END client_type_fieldblock}
+	
+								</td>
+			{END cellblock_section_c18}
+								</tr>
+	 
+	 
+														<tr {$row_section_1} >
+										
+
+{BEGIN cellblock_section_c20}
+<td
+	{$cell_section_c20}
+	class="r-align-left r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c20" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN overseas_type_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_overseas_type_id}  r-vertical-field" 
+	data-signal-error-for="overseas_type_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="overseas_type_id" data-fieldname="overseas_type_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_overseas_type_id}">
+		{BEGIN overseas_type_id_label}{$label m_client_profile overseas_type_id }{END overseas_type_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$overseas_type_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="overseas_type_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile overseas_type_id }		</div>
+	</div>
+</div>
+
+
+{END overseas_type_id_fieldblock}
+	
+								</td>
+			{END cellblock_section_c20}
+			 
+																
+
+{BEGIN cellblock_section_c19}
+<td
+	{$cell_section_c19}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c19" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN domestic_type_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_domestic_type_id}  r-vertical-field" 
+	data-signal-error-for="domestic_type_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="domestic_type_id" data-fieldname="domestic_type_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_domestic_type_id}">
+		{BEGIN domestic_type_id_label}{$label m_client_profile domestic_type_id }{END domestic_type_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$domestic_type_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="domestic_type_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile domestic_type_id }		</div>
+	</div>
+</div>
+
+
+{END domestic_type_id_fieldblock}
+	
+								</td>
+			{END cellblock_section_c19}
+								</tr>
+	 
+	 
+														<tr {$row_section_2} >
+										
+
+{BEGIN cellblock_section_c12}
+<td
+	{$cell_section_c12}
+	class="r-align-left r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c12" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN client_gender_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_client_gender}  r-vertical-field" 
+	data-signal-error-for="client_gender{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="client_gender" data-fieldname="client_gender" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_client_gender}">
+		{BEGIN client_gender_label}{$label m_client_profile client_gender }{END client_gender_label}
+	</label>
+	<div class="r-edit-field">
+		{$client_gender_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="client_gender">
+		<div class="text-muted" >
+		{$tooltip m_client_profile client_gender }		</div>
+	</div>
+</div>
+
+
+{END client_gender_fieldblock}
+	
+								</td>
+			{END cellblock_section_c12}
+			 
+																
+
+{BEGIN cellblock_section_c21}
+<td
+	{$cell_section_c21}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c21" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN dob_place_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dob_place}  r-vertical-field" 
+	data-signal-error-for="dob_place{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field40" {$item_integrated_edit_field40} data-pageid="{$pageid}" data-field="dob_place" data-fieldname="dob_place" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_dob_place}">
+		{BEGIN dob_place_label}{$label m_client_profile dob_place }{END dob_place_label}
+	</label>
+	<div class="r-edit-field">
+		{$dob_place_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="dob_place">
+		<div class="text-muted" >
+		{$tooltip m_client_profile dob_place }		</div>
+	</div>
+</div>
+
+
+{END dob_place_fieldblock}
+	
+								</td>
+			{END cellblock_section_c21}
+								</tr>
+	 
+	 
+														<tr {$row_section_3} >
+										
+
+{BEGIN cellblock_section_c13}
+<td
+	{$cell_section_c13}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c13" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN dob_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dob_date}  r-vertical-field" 
+	data-signal-error-for="dob_date{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field41" {$item_integrated_edit_field41} data-pageid="{$pageid}" data-field="dob_date" data-fieldname="dob_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_dob_date}">
+		{BEGIN dob_date_label}{$label m_client_profile dob_date }{END dob_date_label}
+	</label>
+	<div class="r-edit-field">
+		{$dob_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="dob_date">
+		<div class="text-muted" >
+		{$tooltip m_client_profile dob_date }		</div>
+	</div>
+</div>
+
+
+{END dob_date_fieldblock}
+	
+								</td>
+			{END cellblock_section_c13}
+			 
+																
+
+{BEGIN cellblock_section_c14}
+<td
+	{$cell_section_c14}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c14" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN is_active_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_is_active}  r-vertical-field" 
+	data-signal-error-for="is_active{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="is_active" data-fieldname="is_active" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_is_active}">
+		{BEGIN is_active_label}{$label m_client_profile is_active }{END is_active_label}
+	</label>
+	<div class="r-edit-field">
+		{$is_active_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="is_active">
+		<div class="text-muted" >
+		{$tooltip m_client_profile is_active }		</div>
+	</div>
+</div>
+
+
+{END is_active_fieldblock}
+	
+								</td>
+			{END cellblock_section_c14}
+								</tr>
+			</tbody></table>
+{END section_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section1" {$item_section1} data-pageid="{$pageid}" data-page="m_client_profile_edit">
+		<div class="panel-heading" role="tab" {$section_section2_headattrs} 
+			data-toggle="collapse"  
+
+				href="#section2{$pageid}" aria-expanded="false" aria-controls="section2"
+
+		>
+		  <h4 class="panel-title">
+		  				<a role="button" >
+				Client Detail Information			</a>
+					  </h4>
+		</div>
+		<div  class="panel-collapse collapse  {$section_section2_xtrclass}" role="tabpanel"  {$section_section2_attrs}
+
+				id="section2{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section6_block}
+
+
+
+
+ 
+	 
+												<div class="panel with-tabs panel-default form-tabs" data-itemtype="tabs" data-itemid="tabs" {$item_tabs} data-pageid="{$pageid}" data-page="m_client_profile_edit">
+	<div class="panel-heading">
+		<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section1{$pageid}">
+					Domicile				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section2{$pageid}">
+					Correspondence				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section3{$pageid}">
+					Establishment				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section4{$pageid}">
+					ID Card				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section5{$pageid}">
+					Person in charge				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section7{$pageid}">
+					Bank Account				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section8{$pageid}">
+					Business Source				</a>
+			</li>
+									</ul>
+	</div>
+	<div class="panel-body">
+		<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tab_section1{$pageid}"> 
+			{BEGIN section1_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section1" id="form_section1_{$pageid}" data-makeup="leftbar" {$form_section1} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section1_0} >
+										
+
+{BEGIN cellblock_section1_c1}
+<td
+	{$cell_section1_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_domicile_country_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_domicile_country_id}  r-vertical-field" 
+	data-signal-error-for="address_domicile_country_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="address_domicile_country_id" data-fieldname="address_domicile_country_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_domicile_country_id}">
+		{BEGIN address_domicile_country_id_label}{$label m_client_profile address_domicile_country_id }{END address_domicile_country_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_domicile_country_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_domicile_country_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_domicile_country_id }		</div>
+	</div>
+</div>
+
+
+{END address_domicile_country_id_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c1}
+			 
+																
+
+{BEGIN cellblock_section1_c}
+<td
+	{$cell_section1_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_domicile_province_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_domicile_province_id}  r-vertical-field" 
+	data-signal-error-for="address_domicile_province_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="address_domicile_province_id" data-fieldname="address_domicile_province_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_domicile_province_id}">
+		{BEGIN address_domicile_province_id_label}{$label m_client_profile address_domicile_province_id }{END address_domicile_province_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_domicile_province_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_domicile_province_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_domicile_province_id }		</div>
+	</div>
+</div>
+
+
+{END address_domicile_province_id_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c}
+								</tr>
+	 
+	 
+														<tr {$row_section1_1} >
+										
+
+{BEGIN cellblock_section1_c4}
+<td
+	{$cell_section1_c4}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_domicile_region_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_domicile_region_id}  r-vertical-field" 
+	data-signal-error-for="address_domicile_region_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="address_domicile_region_id" data-fieldname="address_domicile_region_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_domicile_region_id}">
+		{BEGIN address_domicile_region_id_label}{$label m_client_profile address_domicile_region_id }{END address_domicile_region_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_domicile_region_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_domicile_region_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_domicile_region_id }		</div>
+	</div>
+</div>
+
+
+{END address_domicile_region_id_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c4}
+			 
+																
+
+{BEGIN cellblock_section1_c5}
+<td
+	{$cell_section1_c5}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c5" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_domicile_city_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_domicile_city_id}  r-vertical-field" 
+	data-signal-error-for="address_domicile_city_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="address_domicile_city_id" data-fieldname="address_domicile_city_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_domicile_city_id}">
+		{BEGIN address_domicile_city_id_label}{$label m_client_profile address_domicile_city_id }{END address_domicile_city_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_domicile_city_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_domicile_city_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_domicile_city_id }		</div>
+	</div>
+</div>
+
+
+{END address_domicile_city_id_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c5}
+								</tr>
+	 
+	 
+														<tr {$row_section1_2} >
+										
+
+{BEGIN cellblock_section1_c2}
+<td
+	{$cell_section1_c2}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c2" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_domicile_street_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_domicile_street}  r-vertical-field" 
+	data-signal-error-for="address_domicile_street{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="address_domicile_street" data-fieldname="address_domicile_street" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_domicile_street}">
+		{BEGIN address_domicile_street_label}{$label m_client_profile address_domicile_street }{END address_domicile_street_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_domicile_street_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_domicile_street">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_domicile_street }		</div>
+	</div>
+</div>
+
+
+{END address_domicile_street_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c2}
+			 
+																
+
+{BEGIN cellblock_section1_c3}
+<td
+	{$cell_section1_c3}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_domicile_postal_code_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_domicile_postal_code}  r-vertical-field" 
+	data-signal-error-for="address_domicile_postal_code{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="address_domicile_postal_code" data-fieldname="address_domicile_postal_code" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_domicile_postal_code}">
+		{BEGIN address_domicile_postal_code_label}{$label m_client_profile address_domicile_postal_code }{END address_domicile_postal_code_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_domicile_postal_code_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_domicile_postal_code">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_domicile_postal_code }		</div>
+	</div>
+</div>
+
+
+{END address_domicile_postal_code_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c3}
+								</tr>
+	 
+	 
+														<tr {$row_section1_3} >
+										
+
+{BEGIN cellblock_section1_c6}
+<td
+	{$cell_section1_c6}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c6" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_domicile_description_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_domicile_description}  r-vertical-field" 
+	data-signal-error-for="address_domicile_description{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="address_domicile_description" data-fieldname="address_domicile_description" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_domicile_description}">
+		{BEGIN address_domicile_description_label}{$label m_client_profile address_domicile_description }{END address_domicile_description_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_domicile_description_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_domicile_description">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_domicile_description }		</div>
+	</div>
+</div>
+
+
+{END address_domicile_description_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c6}
+			 
+		
+							
+
+{BEGIN cellblock_section1_c7}
+<td
+	{$cell_section1_c7}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c7" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_section1_c7}
+								</tr>
+			</tbody></table>
+{END section1_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section2{$pageid}"> 
+			{BEGIN section2_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section2" id="form_section2_{$pageid}" data-makeup="leftbar" {$form_section2} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section2_0} >
+										
+
+{BEGIN cellblock_section2_c1}
+<td
+	{$cell_section2_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_correspondence_country_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_correspondence_country_id}  r-vertical-field" 
+	data-signal-error-for="address_correspondence_country_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="address_correspondence_country_id" data-fieldname="address_correspondence_country_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_correspondence_country_id}">
+		{BEGIN address_correspondence_country_id_label}{$label m_client_profile address_correspondence_country_id }{END address_correspondence_country_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_correspondence_country_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_correspondence_country_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_correspondence_country_id }		</div>
+	</div>
+</div>
+
+
+{END address_correspondence_country_id_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c1}
+			 
+																
+
+{BEGIN cellblock_section2_c}
+<td
+	{$cell_section2_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_correspondence_province_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_correspondence_province_id}  r-vertical-field" 
+	data-signal-error-for="address_correspondence_province_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="address_correspondence_province_id" data-fieldname="address_correspondence_province_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_correspondence_province_id}">
+		{BEGIN address_correspondence_province_id_label}{$label m_client_profile address_correspondence_province_id }{END address_correspondence_province_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_correspondence_province_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_correspondence_province_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_correspondence_province_id }		</div>
+	</div>
+</div>
+
+
+{END address_correspondence_province_id_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c}
+								</tr>
+	 
+	 
+														<tr {$row_section2_1} >
+										
+
+{BEGIN cellblock_section2_c4}
+<td
+	{$cell_section2_c4}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_correspondence_city_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_correspondence_city_id}  r-vertical-field" 
+	data-signal-error-for="address_correspondence_city_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="address_correspondence_city_id" data-fieldname="address_correspondence_city_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_correspondence_city_id}">
+		{BEGIN address_correspondence_city_id_label}{$label m_client_profile address_correspondence_city_id }{END address_correspondence_city_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_correspondence_city_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_correspondence_city_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_correspondence_city_id }		</div>
+	</div>
+</div>
+
+
+{END address_correspondence_city_id_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c4}
+			 
+																
+
+{BEGIN cellblock_section2_c5}
+<td
+	{$cell_section2_c5}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c5" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_correspondence_region_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_correspondence_region_id}  r-vertical-field" 
+	data-signal-error-for="address_correspondence_region_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="address_correspondence_region_id" data-fieldname="address_correspondence_region_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_correspondence_region_id}">
+		{BEGIN address_correspondence_region_id_label}{$label m_client_profile address_correspondence_region_id }{END address_correspondence_region_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_correspondence_region_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_correspondence_region_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_correspondence_region_id }		</div>
+	</div>
+</div>
+
+
+{END address_correspondence_region_id_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c5}
+								</tr>
+	 
+	 
+														<tr {$row_section2_2} >
+										
+
+{BEGIN cellblock_section2_c2}
+<td
+	{$cell_section2_c2}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c2" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_correspondence_street_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_correspondence_street}  r-vertical-field" 
+	data-signal-error-for="address_correspondence_street{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="address_correspondence_street" data-fieldname="address_correspondence_street" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_correspondence_street}">
+		{BEGIN address_correspondence_street_label}{$label m_client_profile address_correspondence_street }{END address_correspondence_street_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_correspondence_street_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_correspondence_street">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_correspondence_street }		</div>
+	</div>
+</div>
+
+
+{END address_correspondence_street_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c2}
+			 
+																
+
+{BEGIN cellblock_section2_c3}
+<td
+	{$cell_section2_c3}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_correspondence_postal_code_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_correspondence_postal_code}  r-vertical-field" 
+	data-signal-error-for="address_correspondence_postal_code{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="address_correspondence_postal_code" data-fieldname="address_correspondence_postal_code" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_correspondence_postal_code}">
+		{BEGIN address_correspondence_postal_code_label}{$label m_client_profile address_correspondence_postal_code }{END address_correspondence_postal_code_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_correspondence_postal_code_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_correspondence_postal_code">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_correspondence_postal_code }		</div>
+	</div>
+</div>
+
+
+{END address_correspondence_postal_code_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c3}
+								</tr>
+	 
+	 
+														<tr {$row_section2_3} >
+										
+
+{BEGIN cellblock_section2_c6}
+<td
+	{$cell_section2_c6}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c6" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN address_correspondence_description_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_address_correspondence_description}  r-vertical-field" 
+	data-signal-error-for="address_correspondence_description{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="address_correspondence_description" data-fieldname="address_correspondence_description" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_address_correspondence_description}">
+		{BEGIN address_correspondence_description_label}{$label m_client_profile address_correspondence_description }{END address_correspondence_description_label}
+	</label>
+	<div class="r-edit-field">
+		{$address_correspondence_description_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="address_correspondence_description">
+		<div class="text-muted" >
+		{$tooltip m_client_profile address_correspondence_description }		</div>
+	</div>
+</div>
+
+
+{END address_correspondence_description_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c6}
+			 
+		
+							
+
+{BEGIN cellblock_section2_c7}
+<td
+	{$cell_section2_c7}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c7" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_section2_c7}
+								</tr>
+			</tbody></table>
+{END section2_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section3{$pageid}"> 
+			{BEGIN section3_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section3" id="form_section3_{$pageid}" data-makeup="leftbar" {$form_section3} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section3_0} >
+										
+
+{BEGIN cellblock_section3_c1}
+<td
+	{$cell_section3_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section3_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN establishment_place_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_establishment_place}  r-vertical-field" 
+	data-signal-error-for="establishment_place{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="establishment_place" data-fieldname="establishment_place" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_establishment_place}">
+		{BEGIN establishment_place_label}{$label m_client_profile establishment_place }{END establishment_place_label}
+	</label>
+	<div class="r-edit-field">
+		{$establishment_place_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="establishment_place">
+		<div class="text-muted" >
+		{$tooltip m_client_profile establishment_place }		</div>
+	</div>
+</div>
+
+
+{END establishment_place_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c1}
+			 
+																
+
+{BEGIN cellblock_section3_c}
+<td
+	{$cell_section3_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section3_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN establishment_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_establishment_date}  r-vertical-field" 
+	data-signal-error-for="establishment_date{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="establishment_date" data-fieldname="establishment_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_establishment_date}">
+		{BEGIN establishment_date_label}{$label m_client_profile establishment_date }{END establishment_date_label}
+	</label>
+	<div class="r-edit-field">
+		{$establishment_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="establishment_date">
+		<div class="text-muted" >
+		{$tooltip m_client_profile establishment_date }		</div>
+	</div>
+</div>
+
+
+{END establishment_date_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c}
+								</tr>
+	 
+	 
+														<tr {$row_section3_1} >
+										
+
+{BEGIN cellblock_section3_c2}
+<td
+	{$cell_section3_c2}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section3_c2" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN tax_number_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tax_number}  r-vertical-field" 
+	data-signal-error-for="tax_number{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="tax_number" data-fieldname="tax_number" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_tax_number}">
+		{BEGIN tax_number_label}{$label m_client_profile tax_number }{END tax_number_label}
+	</label>
+	<div class="r-edit-field">
+		{$tax_number_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="tax_number">
+		<div class="text-muted" >
+		{$tooltip m_client_profile tax_number }		</div>
+	</div>
+</div>
+
+
+{END tax_number_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c2}
+			 
+																
+
+{BEGIN cellblock_section3_c3}
+<td
+	{$cell_section3_c3}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section3_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN tax_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tax_name}  r-vertical-field" 
+	data-signal-error-for="tax_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="tax_name" data-fieldname="tax_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_tax_name}">
+		{BEGIN tax_name_label}{$label m_client_profile tax_name }{END tax_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$tax_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="tax_name">
+		<div class="text-muted" >
+		{$tooltip m_client_profile tax_name }		</div>
+	</div>
+</div>
+
+
+{END tax_name_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c3}
+								</tr>
+			</tbody></table>
+{END section3_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section4{$pageid}"> 
+			{BEGIN section4_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section4" id="form_section4_{$pageid}" data-makeup="leftbar" {$form_section4} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section4_0} >
+										
+
+{BEGIN cellblock_section4_c1}
+<td
+	{$cell_section4_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section4_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_card_number_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_card_number}  r-vertical-field" 
+	data-signal-error-for="id_card_number{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="id_card_number" data-fieldname="id_card_number" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_card_number}">
+		{BEGIN id_card_number_label}{$label m_client_profile id_card_number }{END id_card_number_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_card_number_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_card_number">
+		<div class="text-muted" >
+		{$tooltip m_client_profile id_card_number }		</div>
+	</div>
+</div>
+
+
+{END id_card_number_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c1}
+			 
+																
+
+{BEGIN cellblock_section4_c}
+<td
+	{$cell_section4_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section4_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_card_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_card_name}  r-vertical-field" 
+	data-signal-error-for="id_card_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="id_card_name" data-fieldname="id_card_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_card_name}">
+		{BEGIN id_card_name_label}{$label m_client_profile id_card_name }{END id_card_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_card_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_card_name">
+		<div class="text-muted" >
+		{$tooltip m_client_profile id_card_name }		</div>
+	</div>
+</div>
+
+
+{END id_card_name_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c}
+								</tr>
+	 
+	 
+														<tr {$row_section4_1} >
+										
+
+{BEGIN cellblock_section4_c2}
+<td
+	{$cell_section4_c2}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section4_c2" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_card_citizen_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_card_citizen}  r-vertical-field" 
+	data-signal-error-for="id_card_citizen{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="id_card_citizen" data-fieldname="id_card_citizen" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_card_citizen}">
+		{BEGIN id_card_citizen_label}{$label m_client_profile id_card_citizen }{END id_card_citizen_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_card_citizen_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_card_citizen">
+		<div class="text-muted" >
+		{$tooltip m_client_profile id_card_citizen }		</div>
+	</div>
+</div>
+
+
+{END id_card_citizen_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c2}
+			 
+																
+
+{BEGIN cellblock_section4_c3}
+<td
+	{$cell_section4_c3}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section4_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_card_expired_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_card_expired_date}  r-vertical-field" 
+	data-signal-error-for="id_card_expired_date{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field33" {$item_integrated_edit_field33} data-pageid="{$pageid}" data-field="id_card_expired_date" data-fieldname="id_card_expired_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_card_expired_date}">
+		{BEGIN id_card_expired_date_label}{$label m_client_profile id_card_expired_date }{END id_card_expired_date_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_card_expired_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_card_expired_date">
+		<div class="text-muted" >
+		{$tooltip m_client_profile id_card_expired_date }		</div>
+	</div>
+</div>
+
+
+{END id_card_expired_date_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c3}
+								</tr>
+			</tbody></table>
+{END section4_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section5{$pageid}"> 
+			{BEGIN section5_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section5" id="form_section5_{$pageid}" data-makeup="leftbar" {$form_section5} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section5_0} >
+										
+
+{BEGIN cellblock_section5_c1}
+<td
+	{$cell_section5_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section5_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN contact_pic_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_contact_pic_name}  r-vertical-field" 
+	data-signal-error-for="contact_pic_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field34" {$item_integrated_edit_field34} data-pageid="{$pageid}" data-field="contact_pic_name" data-fieldname="contact_pic_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_contact_pic_name}">
+		{BEGIN contact_pic_name_label}{$label m_client_profile contact_pic_name }{END contact_pic_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$contact_pic_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="contact_pic_name">
+		<div class="text-muted" >
+		{$tooltip m_client_profile contact_pic_name }		</div>
+	</div>
+</div>
+
+
+{END contact_pic_name_fieldblock}
+	
+								</td>
+			{END cellblock_section5_c1}
+								</tr>
+	 
+	 
+														<tr {$row_section5_1} >
+										
+
+{BEGIN cellblock_section5_c}
+<td
+	{$cell_section5_c}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section5_c" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN contact_pic_number_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_contact_pic_number}  r-vertical-field" 
+	data-signal-error-for="contact_pic_number{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field35" {$item_integrated_edit_field35} data-pageid="{$pageid}" data-field="contact_pic_number" data-fieldname="contact_pic_number" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_contact_pic_number}">
+		{BEGIN contact_pic_number_label}{$label m_client_profile contact_pic_number }{END contact_pic_number_label}
+	</label>
+	<div class="r-edit-field">
+		{$contact_pic_number_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="contact_pic_number">
+		<div class="text-muted" >
+		{$tooltip m_client_profile contact_pic_number }		</div>
+	</div>
+</div>
+
+
+{END contact_pic_number_fieldblock}
+	
+								</td>
+			{END cellblock_section5_c}
+								</tr>
+			</tbody></table>
+{END section5_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section7{$pageid}"> 
+			{BEGIN section7_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section7" id="form_section7_{$pageid}" data-makeup="leftbar" {$form_section7} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section7_0} >
+										
+
+{BEGIN cellblock_section7_c1}
+<td
+	{$cell_section7_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section7_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN bank_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_bank_id}  r-vertical-field" 
+	data-signal-error-for="bank_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field36" {$item_integrated_edit_field36} data-pageid="{$pageid}" data-field="bank_id" data-fieldname="bank_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_bank_id}">
+		{BEGIN bank_id_label}{$label m_client_profile bank_id }{END bank_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$bank_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="bank_id">
+		<div class="text-muted" >
+		{$tooltip m_client_profile bank_id }		</div>
+	</div>
+</div>
+
+
+{END bank_id_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c1}
+								</tr>
+	 
+	 
+														<tr {$row_section7_1} >
+										
+
+{BEGIN cellblock_section7_c3}
+<td
+	{$cell_section7_c3}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section7_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN bank_swift_code_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_bank_swift_code}  r-vertical-field" 
+	data-signal-error-for="bank_swift_code{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field37" {$item_integrated_edit_field37} data-pageid="{$pageid}" data-field="bank_swift_code" data-fieldname="bank_swift_code" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_bank_swift_code}">
+		{BEGIN bank_swift_code_label}{$label m_client_profile bank_swift_code }{END bank_swift_code_label}
+	</label>
+	<div class="r-edit-field">
+		{$bank_swift_code_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="bank_swift_code">
+		<div class="text-muted" >
+		{$tooltip m_client_profile bank_swift_code }		</div>
+	</div>
+</div>
+
+
+{END bank_swift_code_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c3}
+								</tr>
+	 
+	 
+														<tr {$row_section7_2} >
+										
+
+{BEGIN cellblock_section7_c2}
+<td
+	{$cell_section7_c2}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section7_c2" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN bank_currency_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_bank_currency}  r-vertical-field" 
+	data-signal-error-for="bank_currency{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="bank_currency" data-fieldname="bank_currency" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_bank_currency}">
+		{BEGIN bank_currency_label}{$label m_client_profile bank_currency }{END bank_currency_label}
+	</label>
+	<div class="r-edit-field">
+		{$bank_currency_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="bank_currency">
+		<div class="text-muted" >
+		{$tooltip m_client_profile bank_currency }		</div>
+	</div>
+</div>
+
+
+{END bank_currency_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c2}
+								</tr>
+	 
+	 
+														<tr {$row_section7_3} >
+										
+
+{BEGIN cellblock_section7_c}
+<td
+	{$cell_section7_c}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section7_c" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN bank_account_number_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_bank_account_number}  r-vertical-field" 
+	data-signal-error-for="bank_account_number{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field39" {$item_integrated_edit_field39} data-pageid="{$pageid}" data-field="bank_account_number" data-fieldname="bank_account_number" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_bank_account_number}">
+		{BEGIN bank_account_number_label}{$label m_client_profile bank_account_number }{END bank_account_number_label}
+	</label>
+	<div class="r-edit-field">
+		{$bank_account_number_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="bank_account_number">
+		<div class="text-muted" >
+		{$tooltip m_client_profile bank_account_number }		</div>
+	</div>
+</div>
+
+
+{END bank_account_number_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c}
+								</tr>
+			</tbody></table>
+{END section7_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section8{$pageid}"> 
+			{BEGIN section8_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="section8" id="form_section8_{$pageid}" data-makeup="leftbar" {$form_section8} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section8_0} >
+										
+
+{BEGIN cellblock_section8_c1}
+<td
+	{$cell_section8_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section8_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN referral_type_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_referral_type}  r-vertical-field" 
+	data-signal-error-for="referral_type{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field42" {$item_integrated_edit_field42} data-pageid="{$pageid}" data-field="referral_type" data-fieldname="referral_type" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_referral_type}">
+		{BEGIN referral_type_label}{$label m_client_profile referral_type }{END referral_type_label}
+	</label>
+	<div class="r-edit-field">
+		{$referral_type_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="referral_type">
+		<div class="text-muted" >
+		{$tooltip m_client_profile referral_type }		</div>
+	</div>
+</div>
+
+
+{END referral_type_fieldblock}
+	
+								</td>
+			{END cellblock_section8_c1}
+			 
+																
+
+{BEGIN cellblock_section8_c}
+<td
+	{$cell_section8_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section8_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN referral_partnership_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_referral_partnership}  r-vertical-field" 
+	data-signal-error-for="referral_partnership{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field43" {$item_integrated_edit_field43} data-pageid="{$pageid}" data-field="referral_partnership" data-fieldname="referral_partnership" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_referral_partnership}">
+		{BEGIN referral_partnership_label}{$label m_client_profile referral_partnership }{END referral_partnership_label}
+	</label>
+	<div class="r-edit-field">
+		{$referral_partnership_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="referral_partnership">
+		<div class="text-muted" >
+		{$tooltip m_client_profile referral_partnership }		</div>
+	</div>
+</div>
+
+
+{END referral_partnership_fieldblock}
+											
+{BEGIN referral_marketing_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_referral_marketing}  r-vertical-field" 
+	data-signal-error-for="referral_marketing{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field44" {$item_integrated_edit_field44} data-pageid="{$pageid}" data-field="referral_marketing" data-fieldname="referral_marketing" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_referral_marketing}">
+		{BEGIN referral_marketing_label}{$label m_client_profile referral_marketing }{END referral_marketing_label}
+	</label>
+	<div class="r-edit-field">
+		{$referral_marketing_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="referral_marketing">
+		<div class="text-muted" >
+		{$tooltip m_client_profile referral_marketing }		</div>
+	</div>
+</div>
+
+
+{END referral_marketing_fieldblock}
+											
+{BEGIN referral_employee_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_referral_employee}  r-vertical-field" 
+	data-signal-error-for="referral_employee{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field45" {$item_integrated_edit_field45} data-pageid="{$pageid}" data-field="referral_employee" data-fieldname="referral_employee" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_referral_employee}">
+		{BEGIN referral_employee_label}{$label m_client_profile referral_employee }{END referral_employee_label}
+	</label>
+	<div class="r-edit-field">
+		{$referral_employee_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="referral_employee">
+		<div class="text-muted" >
+		{$tooltip m_client_profile referral_employee }		</div>
+	</div>
+</div>
+
+
+{END referral_employee_fieldblock}
+	
+								</td>
+			{END cellblock_section8_c}
+								</tr>
+			</tbody></table>
+{END section8_block}
+						</div>
+				</div>
+	</div>
+</div>  	
+				{END section6_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section2" {$item_section2} data-pageid="{$pageid}" data-page="m_client_profile_edit">
+		<div class="panel-heading" role="tab" {$section_section3_headattrs} 
+			data-toggle="collapse"  
+
+				href="#section3{$pageid}" aria-expanded="false" aria-controls="section3"
+
+		>
+		  <h4 class="panel-title">
+		  				<a role="button" >
+				Disposition			</a>
+					  </h4>
+		</div>
+		<div  class="panel-collapse collapse  {$section_section3_xtrclass}" role="tabpanel"  {$section_section3_attrs}
+
+				id="section3{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section9_block}
+
+
+
+
+ 
+	 
+												
+{BEGIN details_m_disposition_profile}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_m_disposition_profile}			
+							<span>
+					{$detailslButtons_m_disposition_profile}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_m_disposition_profile}
+		</div>
+	</div>
+</div>
+{END details_m_disposition_profile}
+	
+				{END section9_block}
+		  </div>
+		</div>
+	</div>
+											<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN m_client_profilecol_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_m_client_profilecol}  r-vertical-field" 
+	data-signal-error-for="m_client_profilecol{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="m_client_profilecol" data-fieldname="m_client_profilecol" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_m_client_profilecol}">
+		{BEGIN m_client_profilecol_label}{$label m_client_profile m_client_profilecol }{END m_client_profilecol_label}
+	</label>
+	<div class="r-edit-field">
+		{$m_client_profilecol_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="m_client_profilecol">
+		<div class="text-muted" >
+		{$tooltip m_client_profile m_client_profilecol }		</div>
+	</div>
+</div>
+
+
+{END m_client_profilecol_fieldblock}
+											
+{BEGIN last_user_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_last_user}  r-vertical-field" 
+	data-signal-error-for="last_user{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="last_user" data-fieldname="last_user" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_last_user}">
+		{BEGIN last_user_label}{$label m_client_profile last_user }{END last_user_label}
+	</label>
+	<div class="r-edit-field">
+		{$last_user_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="last_user">
+		<div class="text-muted" >
+		{$tooltip m_client_profile last_user }		</div>
+	</div>
+</div>
+
+
+{END last_user_fieldblock}
+											
+{BEGIN last_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_last_date}  r-vertical-field" 
+	data-signal-error-for="last_date{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="last_date" data-fieldname="last_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_last_date}">
+		{BEGIN last_date_label}{$label m_client_profile last_date }{END last_date_label}
+	</label>
+	<div class="r-edit-field">
+		{$last_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="last_date">
+		<div class="text-muted" >
+		{$tooltip m_client_profile last_date }		</div>
+	</div>
+</div>
+
+
+{END last_date_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	
+">
+		 
+		{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+{END save_edit}
+	 
+		{BEGIN back_button}
+<span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$closebutton_attrs} >
+							Cancel			</a>
+</span>
+{END close_button}
+		</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

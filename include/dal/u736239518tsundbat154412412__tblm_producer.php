@@ -1,0 +1,45 @@
+<?php
+$dalTablem_producer = array();
+$dalTablem_producer["id"] = array("type"=>3,"varname"=>"id", "name" => "id", "autoInc" => "1");
+$dalTablem_producer["user_id_tsun"] = array("type"=>200,"varname"=>"user_id_tsun", "name" => "user_id_tsun", "autoInc" => "0");
+$dalTablem_producer["producer_name"] = array("type"=>200,"varname"=>"producer_name", "name" => "producer_name", "autoInc" => "0");
+$dalTablem_producer["producer_category_id"] = array("type"=>3,"varname"=>"producer_category_id", "name" => "producer_category_id", "autoInc" => "0");
+$dalTablem_producer["producer_type_id"] = array("type"=>3,"varname"=>"producer_type_id", "name" => "producer_type_id", "autoInc" => "0");
+$dalTablem_producer["producer_domestic_type_id"] = array("type"=>3,"varname"=>"producer_domestic_type_id", "name" => "producer_domestic_type_id", "autoInc" => "0");
+$dalTablem_producer["producer_overseas_type_id"] = array("type"=>3,"varname"=>"producer_overseas_type_id", "name" => "producer_overseas_type_id", "autoInc" => "0");
+$dalTablem_producer["producer_network_association"] = array("type"=>200,"varname"=>"producer_network_association", "name" => "producer_network_association", "autoInc" => "0");
+$dalTablem_producer["producer_network_company_name"] = array("type"=>200,"varname"=>"producer_network_company_name", "name" => "producer_network_company_name", "autoInc" => "0");
+$dalTablem_producer["producer_gender"] = array("type"=>200,"varname"=>"producer_gender", "name" => "producer_gender", "autoInc" => "0");
+$dalTablem_producer["dob_place"] = array("type"=>200,"varname"=>"dob_place", "name" => "dob_place", "autoInc" => "0");
+$dalTablem_producer["dob_date"] = array("type"=>135,"varname"=>"dob_date", "name" => "dob_date", "autoInc" => "0");
+$dalTablem_producer["address_street"] = array("type"=>200,"varname"=>"address_street", "name" => "address_street", "autoInc" => "0");
+$dalTablem_producer["address_description"] = array("type"=>200,"varname"=>"address_description", "name" => "address_description", "autoInc" => "0");
+$dalTablem_producer["address_postal_code"] = array("type"=>200,"varname"=>"address_postal_code", "name" => "address_postal_code", "autoInc" => "0");
+$dalTablem_producer["address_region_id"] = array("type"=>3,"varname"=>"address_region_id", "name" => "address_region_id", "autoInc" => "0");
+$dalTablem_producer["address_city_id"] = array("type"=>3,"varname"=>"address_city_id", "name" => "address_city_id", "autoInc" => "0");
+$dalTablem_producer["address_province_id"] = array("type"=>3,"varname"=>"address_province_id", "name" => "address_province_id", "autoInc" => "0");
+$dalTablem_producer["address_country_id"] = array("type"=>3,"varname"=>"address_country_id", "name" => "address_country_id", "autoInc" => "0");
+$dalTablem_producer["establishment_country_id"] = array("type"=>3,"varname"=>"establishment_country_id", "name" => "establishment_country_id", "autoInc" => "0");
+$dalTablem_producer["establishment_date"] = array("type"=>135,"varname"=>"establishment_date", "name" => "establishment_date", "autoInc" => "0");
+$dalTablem_producer["licence_nib"] = array("type"=>200,"varname"=>"licence_nib", "name" => "licence_nib", "autoInc" => "0");
+$dalTablem_producer["tax_number"] = array("type"=>200,"varname"=>"tax_number", "name" => "tax_number", "autoInc" => "0");
+$dalTablem_producer["tax_name"] = array("type"=>200,"varname"=>"tax_name", "name" => "tax_name", "autoInc" => "0");
+$dalTablem_producer["pic_name"] = array("type"=>200,"varname"=>"pic_name", "name" => "pic_name", "autoInc" => "0");
+$dalTablem_producer["pic_phone_number"] = array("type"=>200,"varname"=>"pic_phone_number", "name" => "pic_phone_number", "autoInc" => "0");
+$dalTablem_producer["agreement_number"] = array("type"=>200,"varname"=>"agreement_number", "name" => "agreement_number", "autoInc" => "0");
+$dalTablem_producer["agreement_period_start"] = array("type"=>135,"varname"=>"agreement_period_start", "name" => "agreement_period_start", "autoInc" => "0");
+$dalTablem_producer["agreement_period_end"] = array("type"=>135,"varname"=>"agreement_period_end", "name" => "agreement_period_end", "autoInc" => "0");
+$dalTablem_producer["bank_id"] = array("type"=>3,"varname"=>"bank_id", "name" => "bank_id", "autoInc" => "0");
+$dalTablem_producer["bank_swift_code"] = array("type"=>200,"varname"=>"bank_swift_code", "name" => "bank_swift_code", "autoInc" => "0");
+$dalTablem_producer["bank_account_number"] = array("type"=>200,"varname"=>"bank_account_number", "name" => "bank_account_number", "autoInc" => "0");
+$dalTablem_producer["is_active"] = array("type"=>16,"varname"=>"is_active", "name" => "is_active", "autoInc" => "0");
+$dalTablem_producer["is_delete"] = array("type"=>16,"varname"=>"is_delete", "name" => "is_delete", "autoInc" => "0");
+$dalTablem_producer["deleted_date"] = array("type"=>135,"varname"=>"deleted_date", "name" => "deleted_date", "autoInc" => "0");
+$dalTablem_producer["created_by"] = array("type"=>200,"varname"=>"created_by", "name" => "created_by", "autoInc" => "0");
+$dalTablem_producer["created_date"] = array("type"=>135,"varname"=>"created_date", "name" => "created_date", "autoInc" => "0");
+$dalTablem_producer["last_update_by"] = array("type"=>3,"varname"=>"last_update_by", "name" => "last_update_by", "autoInc" => "0");
+$dalTablem_producer["last_update_date"] = array("type"=>135,"varname"=>"last_update_date", "name" => "last_update_date", "autoInc" => "0");
+$dalTablem_producer["id"]["key"]=true;
+
+$dal_info["u736239518tsundbat154412412__tblm_producer"] = &$dalTablem_producer;
+?>

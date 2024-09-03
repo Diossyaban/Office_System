@@ -1,0 +1,22 @@
+[data-page="t_delivery_add"][data-itemid="add_back_list"] > .btn {
+  width: 100px;
+}
+[data-page="t_delivery_add"][data-itemid="add_save"] > .btn {
+  width: 100px;
+}
+[data-page="t_delivery_add"][data-itemid="add_reset"] > .btn {
+  width: 100px;
+}
+[data-page="t_delivery_add"][data-itemid="page_image_ash8f23hr"] {
+  width: 400px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #BC9C22;
+    border-color: transparent;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-group.open .dropdown-toggle.btn-primary {
+    background-color: #e7c235;
+    border-color: #b6a35d;
+}

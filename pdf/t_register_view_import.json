@@ -1,0 +1,217 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel t_register_view import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$t_register_id_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$t_register_id_x_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$t_register_no_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$t_register_date_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$t_register_source_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$t_register_location_id_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$t_register_transfer_fl_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$t_register_transfer_location_id_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$t_register_transfer_date_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$t_register_transfer_courier_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$t_register_doc_from_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$t_register_doc_owner_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$t_register_images_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$t_register_note_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$t_register_status_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$add_user_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$add_date_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$edit_user_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$edit_date_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+				
+				
+			{"text":{$nomor_pdfvalue},"hidden":"{$item_hide_import_field19}"},
+				
+				
+			{"text":{$digit_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+				
+				
+			{"text":{$t_register_doc_user_pdfvalue},"hidden":"{$item_hide_import_field21}"},
+				
+				
+			{"text":{$add_sign_user_pdfvalue},"hidden":"{$item_hide_import_field22}"},
+				
+				
+			{"text":{$add_sign_date_pdfvalue},"hidden":"{$item_hide_import_field23}"},
+				
+				
+			{"text":{$add_sign_fl_pdfvalue},"hidden":"{$item_hide_import_field24}"},
+				
+				
+			{"text":{$last_user_pdfvalue},"hidden":"{$item_hide_import_field25}"},
+				
+				
+			{"text":{$last_date_pdfvalue},"hidden":"{$item_hide_import_field26}"},
+				
+				
+			{"text":{$t_register_feedback_date_pdfvalue},"hidden":"{$item_hide_import_field27}"},
+				
+				
+			{"text":{$t_register_feedback_time_pdfvalue},"hidden":"{$item_hide_import_field28}"},
+				
+				
+			{"text":{$t_register_feedback_signature_pdfvalue},"hidden":"{$item_hide_import_field29}"},
+				
+				
+			{"text":{$t_register_feedback_takephoto_pdfvalue},"hidden":"{$item_hide_import_field30}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

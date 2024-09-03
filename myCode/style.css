@@ -1,0 +1,55 @@
+ .body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .datetime {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .datetime:hover {
+            background-color: silver;
+            transform: scale(1.05);
+        }
+
+        .datetime .date, .datetime .time {
+            margin: 10px 0;
+        }
+
+     .datetime .date {
+        font-size: 24px; 
+        color: #9d8426;
+        font-weight: bold;
+    }
+
+    .datetime .time {
+        font-size: 36px; 
+        color: #333;
+        font-weight: bold;
+        transition: text-shadow 0.3s;
+    }
+
+        .datetime .time span {
+            margin: 0 2px;
+        }
+
+        .datetime .time:hover {
+            text-shadow: 
+                0 0 3px rgba(192, 192, 192, 0.6), 
+                0 0 6px rgba(192, 192, 192, 0.6), 
+                0 0 9px rgba(192, 192, 192, 0.6), 
+                0 0 12px rgba(192, 192, 192, 0.6);
+        }

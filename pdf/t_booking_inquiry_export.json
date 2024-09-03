@@ -1,0 +1,178 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel t_booking_inquiry export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$t_booking_id_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$t_booking_no_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$t_booking_from_date_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$t_booking_to_date_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$t_booking_from_time_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$t_booking_to_time_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$t_booking_destination_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$t_booking_remarks_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$add_user_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$add_date_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$edit_user_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$edit_date_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$t_booking_status_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$m_vehicle_id_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$t_booking_user_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$m_vehicle_driver_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Voucher_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$flag_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

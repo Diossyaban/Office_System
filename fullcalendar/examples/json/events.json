@@ -1,0 +1,49 @@
+[
+  {
+   "id": "112",
+   "title": "Reunión",
+   "description": "España es muy grande",
+   "start": "2020-02-13 11:05:00",
+   "end": "2020-02-13 12:05:00",
+   "color": "#FC4242"
+  },
+  {
+    "title": "Conference",
+    "start": "2020-02-11",
+    "end": "2020-02-13",
+    "description": "description for All Day Event",
+    "color": "#FC4242"
+  },
+  {
+    "title": "Meeting",
+    "start": "2020-02-12 10:30:00",
+    "end": "2020-02-12 12:30:00",
+    "color": "#FC4242"
+  },
+  {
+    "title": "Lunch",
+    "start": "2020-02-12 12:00:00"
+  },
+  {
+    "title": "Meeting",
+    "start": "2020-02-12 14:30:00"
+  },
+  {
+    "title": "Happy Hour",
+    "start": "2020-02-12 17:30:00"
+  },
+  {
+    "title": "Dinner",
+    "start": "2020-02-12T20:00:00"
+  },
+  {
+    "title": "Birthday Party",
+    "start": "2020-02-13 07:00:00",
+    "end": "2020-02-13 12:00:00"
+  },
+  {
+    "title": "Click for Google",
+    "url": "http://google.com/",
+    "start": "2020-02-28"
+  }
+]

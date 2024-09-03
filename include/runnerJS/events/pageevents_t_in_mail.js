@@ -1,0 +1,3 @@
+
+Runner.pages.PageSettings.addPageEvent('t_in_mail',Runner.pages.constants.PAGE_VIEW,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){var ctrl=Runner.getControl(pageid,'t_register_transfer_fl');if(ctrl.getValue()=='on'){pageObj.toggleItem("integrated_edit_field7",true);pageObj.toggleItem("integrated_edit_field8",true);pageObj.toggleItem("integrated_edit_field9",true);}
+else if(ctrl.getValue()!='on'){pageObj.toggleItem("integrated_edit_field7",false);pageObj.toggleItem("integrated_edit_field8",false);pageObj.toggleItem("integrated_edit_field9",false);}});

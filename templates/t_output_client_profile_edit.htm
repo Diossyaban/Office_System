@@ -1,0 +1,894 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-edit"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div data-resize-left="leftbar"  data-fixed class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Show menu" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notifications			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		User Profile		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Admin Area		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Change password		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel t_output_client_profile edit}</h2>
+		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<div data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END message_back_button}
+{BEGIN message_view_page_button}
+		<a class="btn btn-sm btn-default" href="t_output_client_profile_view.php?{$editlink}" {$view_page_button_attrs}>View</a>
+{END message_view_page_button}
+</div>
+</div>
+			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN dtexe_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dtexe}  r-vertical-field" 
+	data-signal-error-for="dtexe{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="dtexe" data-fieldname="dtexe" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_dtexe}">
+		{BEGIN dtexe_label}{$label t_output_client_profile dtexe }{END dtexe_label}
+	</label>
+	<div class="r-edit-field">
+		{$dtexe_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="dtexe">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile dtexe }		</div>
+	</div>
+</div>
+
+
+{END dtexe_fieldblock}
+											
+{BEGIN id_client_profile_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_client_profile}  r-vertical-field" 
+	data-signal-error-for="id_client_profile{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="id_client_profile" data-fieldname="id_client_profile" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_client_profile}">
+		{BEGIN id_client_profile_label}{$label t_output_client_profile id_client_profile }{END id_client_profile_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_client_profile_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_client_profile">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile id_client_profile }		</div>
+	</div>
+</div>
+
+
+{END id_client_profile_fieldblock}
+											
+{BEGIN client_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_client_name}  r-vertical-field" 
+	data-signal-error-for="client_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="client_name" data-fieldname="client_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_client_name}">
+		{BEGIN client_name_label}{$label t_output_client_profile client_name }{END client_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$client_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="client_name">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile client_name }		</div>
+	</div>
+</div>
+
+
+{END client_name_fieldblock}
+											
+{BEGIN flag_client_type_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_client_type}  r-vertical-field" 
+	data-signal-error-for="flag_client_type{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="flag_client_type" data-fieldname="flag_client_type" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_client_type}">
+		{BEGIN flag_client_type_label}{$label t_output_client_profile flag_client_type }{END flag_client_type_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_client_type_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_client_type">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_client_type }		</div>
+	</div>
+</div>
+
+
+{END flag_client_type_fieldblock}
+											
+{BEGIN flag_domestic_type_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_domestic_type_id}  r-vertical-field" 
+	data-signal-error-for="flag_domestic_type_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="flag_domestic_type_id" data-fieldname="flag_domestic_type_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_domestic_type_id}">
+		{BEGIN flag_domestic_type_id_label}{$label t_output_client_profile flag_domestic_type_id }{END flag_domestic_type_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_domestic_type_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_domestic_type_id">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_domestic_type_id }		</div>
+	</div>
+</div>
+
+
+{END flag_domestic_type_id_fieldblock}
+											
+{BEGIN flag_overseas_type_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_overseas_type_id}  r-vertical-field" 
+	data-signal-error-for="flag_overseas_type_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="flag_overseas_type_id" data-fieldname="flag_overseas_type_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_overseas_type_id}">
+		{BEGIN flag_overseas_type_id_label}{$label t_output_client_profile flag_overseas_type_id }{END flag_overseas_type_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_overseas_type_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_overseas_type_id">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_overseas_type_id }		</div>
+	</div>
+</div>
+
+
+{END flag_overseas_type_id_fieldblock}
+											
+{BEGIN flag_client_gender_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_client_gender}  r-vertical-field" 
+	data-signal-error-for="flag_client_gender{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="flag_client_gender" data-fieldname="flag_client_gender" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_client_gender}">
+		{BEGIN flag_client_gender_label}{$label t_output_client_profile flag_client_gender }{END flag_client_gender_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_client_gender_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_client_gender">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_client_gender }		</div>
+	</div>
+</div>
+
+
+{END flag_client_gender_fieldblock}
+											
+{BEGIN flag_dob_place_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_dob_place}  r-vertical-field" 
+	data-signal-error-for="flag_dob_place{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="flag_dob_place" data-fieldname="flag_dob_place" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_dob_place}">
+		{BEGIN flag_dob_place_label}{$label t_output_client_profile flag_dob_place }{END flag_dob_place_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_dob_place_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_dob_place">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_dob_place }		</div>
+	</div>
+</div>
+
+
+{END flag_dob_place_fieldblock}
+											
+{BEGIN flag_dob_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_dob_date}  r-vertical-field" 
+	data-signal-error-for="flag_dob_date{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="flag_dob_date" data-fieldname="flag_dob_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_dob_date}">
+		{BEGIN flag_dob_date_label}{$label t_output_client_profile flag_dob_date }{END flag_dob_date_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_dob_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_dob_date">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_dob_date }		</div>
+	</div>
+</div>
+
+
+{END flag_dob_date_fieldblock}
+											
+{BEGIN flag_address_domicile_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_address_domicile}  r-vertical-field" 
+	data-signal-error-for="flag_address_domicile{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="flag_address_domicile" data-fieldname="flag_address_domicile" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_address_domicile}">
+		{BEGIN flag_address_domicile_label}{$label t_output_client_profile flag_address_domicile }{END flag_address_domicile_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_address_domicile_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_address_domicile">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_address_domicile }		</div>
+	</div>
+</div>
+
+
+{END flag_address_domicile_fieldblock}
+											
+{BEGIN flag_address_correspondence_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_address_correspondence}  r-vertical-field" 
+	data-signal-error-for="flag_address_correspondence{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="flag_address_correspondence" data-fieldname="flag_address_correspondence" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_address_correspondence}">
+		{BEGIN flag_address_correspondence_label}{$label t_output_client_profile flag_address_correspondence }{END flag_address_correspondence_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_address_correspondence_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_address_correspondence">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_address_correspondence }		</div>
+	</div>
+</div>
+
+
+{END flag_address_correspondence_fieldblock}
+											
+{BEGIN flag_establishment_place_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_establishment_place}  r-vertical-field" 
+	data-signal-error-for="flag_establishment_place{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="flag_establishment_place" data-fieldname="flag_establishment_place" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_establishment_place}">
+		{BEGIN flag_establishment_place_label}{$label t_output_client_profile flag_establishment_place }{END flag_establishment_place_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_establishment_place_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_establishment_place">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_establishment_place }		</div>
+	</div>
+</div>
+
+
+{END flag_establishment_place_fieldblock}
+											
+{BEGIN flag_establishment_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_establishment_date}  r-vertical-field" 
+	data-signal-error-for="flag_establishment_date{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="flag_establishment_date" data-fieldname="flag_establishment_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_establishment_date}">
+		{BEGIN flag_establishment_date_label}{$label t_output_client_profile flag_establishment_date }{END flag_establishment_date_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_establishment_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_establishment_date">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_establishment_date }		</div>
+	</div>
+</div>
+
+
+{END flag_establishment_date_fieldblock}
+											
+{BEGIN flag_tax_number_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_tax_number}  r-vertical-field" 
+	data-signal-error-for="flag_tax_number{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="flag_tax_number" data-fieldname="flag_tax_number" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_tax_number}">
+		{BEGIN flag_tax_number_label}{$label t_output_client_profile flag_tax_number }{END flag_tax_number_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_tax_number_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_tax_number">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_tax_number }		</div>
+	</div>
+</div>
+
+
+{END flag_tax_number_fieldblock}
+											
+{BEGIN flag_tax_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_tax_name}  r-vertical-field" 
+	data-signal-error-for="flag_tax_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="flag_tax_name" data-fieldname="flag_tax_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_tax_name}">
+		{BEGIN flag_tax_name_label}{$label t_output_client_profile flag_tax_name }{END flag_tax_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_tax_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_tax_name">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_tax_name }		</div>
+	</div>
+</div>
+
+
+{END flag_tax_name_fieldblock}
+											
+{BEGIN flag_id_card_number_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_id_card_number}  r-vertical-field" 
+	data-signal-error-for="flag_id_card_number{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="flag_id_card_number" data-fieldname="flag_id_card_number" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_id_card_number}">
+		{BEGIN flag_id_card_number_label}{$label t_output_client_profile flag_id_card_number }{END flag_id_card_number_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_id_card_number_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_id_card_number">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_id_card_number }		</div>
+	</div>
+</div>
+
+
+{END flag_id_card_number_fieldblock}
+											
+{BEGIN flag_id_card_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_id_card_name}  r-vertical-field" 
+	data-signal-error-for="flag_id_card_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="flag_id_card_name" data-fieldname="flag_id_card_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_id_card_name}">
+		{BEGIN flag_id_card_name_label}{$label t_output_client_profile flag_id_card_name }{END flag_id_card_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_id_card_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_id_card_name">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_id_card_name }		</div>
+	</div>
+</div>
+
+
+{END flag_id_card_name_fieldblock}
+											
+{BEGIN flag_id_card_citizen_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_id_card_citizen}  r-vertical-field" 
+	data-signal-error-for="flag_id_card_citizen{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="flag_id_card_citizen" data-fieldname="flag_id_card_citizen" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_id_card_citizen}">
+		{BEGIN flag_id_card_citizen_label}{$label t_output_client_profile flag_id_card_citizen }{END flag_id_card_citizen_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_id_card_citizen_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_id_card_citizen">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_id_card_citizen }		</div>
+	</div>
+</div>
+
+
+{END flag_id_card_citizen_fieldblock}
+											
+{BEGIN flag_id_card_expired_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_id_card_expired_date}  r-vertical-field" 
+	data-signal-error-for="flag_id_card_expired_date{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="flag_id_card_expired_date" data-fieldname="flag_id_card_expired_date" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_id_card_expired_date}">
+		{BEGIN flag_id_card_expired_date_label}{$label t_output_client_profile flag_id_card_expired_date }{END flag_id_card_expired_date_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_id_card_expired_date_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_id_card_expired_date">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_id_card_expired_date }		</div>
+	</div>
+</div>
+
+
+{END flag_id_card_expired_date_fieldblock}
+											
+{BEGIN flag_contact_pic_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_contact_pic_name}  r-vertical-field" 
+	data-signal-error-for="flag_contact_pic_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="flag_contact_pic_name" data-fieldname="flag_contact_pic_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_contact_pic_name}">
+		{BEGIN flag_contact_pic_name_label}{$label t_output_client_profile flag_contact_pic_name }{END flag_contact_pic_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_contact_pic_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_contact_pic_name">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_contact_pic_name }		</div>
+	</div>
+</div>
+
+
+{END flag_contact_pic_name_fieldblock}
+											
+{BEGIN flag_contact_pic_number_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_contact_pic_number}  r-vertical-field" 
+	data-signal-error-for="flag_contact_pic_number{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="flag_contact_pic_number" data-fieldname="flag_contact_pic_number" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_contact_pic_number}">
+		{BEGIN flag_contact_pic_number_label}{$label t_output_client_profile flag_contact_pic_number }{END flag_contact_pic_number_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_contact_pic_number_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_contact_pic_number">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_contact_pic_number }		</div>
+	</div>
+</div>
+
+
+{END flag_contact_pic_number_fieldblock}
+											
+{BEGIN flag_bank_info_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_bank_info}  r-vertical-field" 
+	data-signal-error-for="flag_bank_info{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="flag_bank_info" data-fieldname="flag_bank_info" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_bank_info}">
+		{BEGIN flag_bank_info_label}{$label t_output_client_profile flag_bank_info }{END flag_bank_info_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_bank_info_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_bank_info">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_bank_info }		</div>
+	</div>
+</div>
+
+
+{END flag_bank_info_fieldblock}
+											
+{BEGIN flag_refferral_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_refferral}  r-vertical-field" 
+	data-signal-error-for="flag_refferral{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="flag_refferral" data-fieldname="flag_refferral" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_refferral}">
+		{BEGIN flag_refferral_label}{$label t_output_client_profile flag_refferral }{END flag_refferral_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_refferral_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_refferral">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_refferral }		</div>
+	</div>
+</div>
+
+
+{END flag_refferral_fieldblock}
+											
+{BEGIN flag_fill_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_flag_fill}  r-vertical-field" 
+	data-signal-error-for="flag_fill{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="flag_fill" data-fieldname="flag_fill" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_flag_fill}">
+		{BEGIN flag_fill_label}{$label t_output_client_profile flag_fill }{END flag_fill_label}
+	</label>
+	<div class="r-edit-field">
+		{$flag_fill_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="flag_fill">
+		<div class="text-muted" >
+		{$tooltip t_output_client_profile flag_fill }		</div>
+	</div>
+</div>
+
+
+{END flag_fill_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	
+">
+		 
+		{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+{END save_edit}
+	 
+		{BEGIN back_button}
+<span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$closebutton_attrs} >
+							Cancel			</a>
+</span>
+{END close_button}
+		</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+		 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
+				<a  {$resetbutton_attrs}  title="" >
+				
+		Reset		
+		</a>
+	</li>
+							{BEGIN view_page_button}
+	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
+				<a  href="t_output_client_profile_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
+				
+		View		
+		</a>
+	</li>
+{END view_page_button}
+					</ul>
+	</span>
+</span>
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>
