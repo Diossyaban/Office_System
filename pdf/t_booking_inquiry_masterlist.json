@@ -263,7 +263,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel t_booking_inquiry t_booking_id }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel t_booking_inquiry t_booking_id }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -742,7 +742,7 @@ pdfDocument = {
 	cellId: 'headcell_field17',
 	col:0,
 	row:0,
-			fieldName: 'flag',
+			fieldName: 'fr_date',
 				style: 'headcell',
 		
 		
@@ -756,11 +756,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel t_booking_inquiry flag }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
+			{"text":"{$jslabel t_booking_inquiry fr_date }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$flag_align}',
+              "alignment": '{$fr_date_align}',
      
       
       },
@@ -1273,7 +1273,7 @@ pdfDocument = {
 	cellId: 'cell_field17',
 	col:0,
 	row:0,
-			fieldName: 'flag',
+			fieldName: 'fr_date',
 				style: 'bodycell',
 		
 		
@@ -1287,11 +1287,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$flag_pdfvalue},"hidden":"{$item_hide_simple_grid_field17}"},
+			{"text":{$fr_date_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$flag_align}',
+              "alignment": '{$fr_date_align}',
      
       
       },

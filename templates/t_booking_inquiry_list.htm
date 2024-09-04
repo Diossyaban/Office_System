@@ -116,19 +116,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_add_date}</span>
 						</div>
 		{END searchCtrlBlock_add_date}
-																{BEGIN searchCtrlBlock_flag}
+																{BEGIN searchCtrlBlock_fr_date}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_flag}" {$filterRow_attrs_flag}>
-			<label>{$label t_booking_inquiry flag }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_fr_date}" {$filterRow_attrs_fr_date}>
+			<label>{$label t_booking_inquiry fr_date }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_flag}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_flag}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_flag}</span>
+								<span class="rnr-searchtype">{$searchtype_fr_date}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fr_date}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fr_date}</span>
 						</div>
-		{END searchCtrlBlock_flag}
+		{END searchCtrlBlock_fr_date}
 																{BEGIN searchCtrlBlock_Voucher}
 
 
@@ -797,7 +797,10 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="m_vehicle_driver"]:before {
 		content: "{$label t_booking_inquiry m_vehicle_driver}";
 	}
-			}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fr_date"]:before {
+		content: "{$label t_booking_inquiry fr_date}";
+	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-condensed table-striped table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -855,21 +858,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$m_vehicle_id_class}	"
+		 r-ori-vert		 {$t_booking_user_class}	"
 
-			data-field="m_vehicle_id"
+			data-field="t_booking_user"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN m_vehicle_id_fieldheadercolumn}
-	{BEGIN m_vehicle_id_fieldheader}
-	<SPAN {$m_vehicle_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="m_vehicle_id" data-fieldname="m_vehicle_id">
-	{$label t_booking_inquiry m_vehicle_id }	{$arrow_icon_m_vehicle_id}
+		{BEGIN t_booking_user_fieldheadercolumn}
+	{BEGIN t_booking_user_fieldheader}
+	<SPAN {$t_booking_user_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="t_booking_user" data-fieldname="t_booking_user">
+	{$label t_booking_inquiry t_booking_user }	{$arrow_icon_t_booking_user}
 	</SPAN>
-	{END m_vehicle_id_fieldheader}
-{END m_vehicle_id_fieldheadercolumn}
+	{END t_booking_user_fieldheader}
+{END t_booking_user_fieldheadercolumn}
 
 	
 	</th>
@@ -899,6 +902,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$fr_date_class}	"
+
+			data-field="fr_date"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fr_date_fieldheadercolumn}
+	{BEGIN fr_date_fieldheader}
+	<SPAN {$fr_date_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fr_date" data-fieldname="fr_date">
+	{$label t_booking_inquiry fr_date }	{$arrow_icon_fr_date}
+	</SPAN>
+	{END fr_date_fieldheader}
+{END fr_date_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
 									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
@@ -930,21 +958,11 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$t_booking_user_class}	"
+		 r-ori-vert			"
 
-			data-field="t_booking_user"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
-
-	 
-		{BEGIN t_booking_user_fieldheadercolumn}
-	{BEGIN t_booking_user_fieldheader}
-	<SPAN {$t_booking_user_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="t_booking_user" data-fieldname="t_booking_user">
-	{$label t_booking_inquiry t_booking_user }	{$arrow_icon_t_booking_user}
-	</SPAN>
-	{END t_booking_user_fieldheader}
-{END t_booking_user_fieldheadercolumn}
 
 	
 	</th>
@@ -1005,11 +1023,21 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert		 {$m_vehicle_id_class}	"
 
+			data-field="m_vehicle_id"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
+
+	 
+		{BEGIN m_vehicle_id_fieldheadercolumn}
+	{BEGIN m_vehicle_id_fieldheader}
+	<SPAN {$m_vehicle_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="m_vehicle_id" data-fieldname="m_vehicle_id">
+	{$label t_booking_inquiry m_vehicle_id }	{$arrow_icon_m_vehicle_id}
+	</SPAN>
+	{END m_vehicle_id_fieldheader}
+{END m_vehicle_id_fieldheadercolumn}
 
 	
 	</th>
@@ -1053,7 +1081,7 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn btn-primary  btn-sm 
+	<a type="button" title="View record" class="btn btn-default  btn-sm 
 	" href="t_booking_inquiry_view.php?{$editlink}" {$viewlink_attrs} title="View" data-popup >
 					<span class="glyphicon glyphicon-search"></span>
 							View			</a>
@@ -1093,19 +1121,19 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$m_vehicle_id_class}	"
+		 r-ori-vert		 {$t_booking_user_class}	"
 
-			data-field="m_vehicle_id"
+			data-field="t_booking_user"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN m_vehicle_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="m_vehicle_id" data-fieldname="m_vehicle_id" data-default-width >
-{$m_vehicle_id_value}
+		{BEGIN t_booking_user_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="t_booking_user" data-fieldname="t_booking_user" data-default-width >
+{$t_booking_user_value}
 </span>
-{END m_vehicle_id_fieldcolumn}	
+{END t_booking_user_fieldcolumn}	
 	</td>
 	{END cellblock_grid_headcell_field8}
 									{BEGIN cellblock_grid_cell_field1}
@@ -1137,6 +1165,27 @@
 {END t_booking_to_date_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_headcell_field12}
+	<td
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$fr_date_class}	"
+
+			data-field="fr_date"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fr_date_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fr_date" data-fieldname="fr_date" data-default-width >
+{$fr_date_value}
+</span>
+{END fr_date_fieldcolumn}	
+	</td>
+	{END cellblock_grid_headcell_field12}
 									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
@@ -1164,19 +1213,13 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$t_booking_user_class}	"
+		 r-ori-vert			"
 
-			data-field="t_booking_user"
 	
 	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	 
-		{BEGIN t_booking_user_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="t_booking_user" data-fieldname="t_booking_user" data-default-width >
-{$t_booking_user_value}
-</span>
-{END t_booking_user_fieldcolumn}	
+	
 	</td>
 	{END cellblock_grid_cell_field4}
 									{BEGIN cellblock_grid_cell_field5}
@@ -1227,13 +1270,19 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert		 {$m_vehicle_id_class}	"
 
+			data-field="m_vehicle_id"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	
+	 
+		{BEGIN m_vehicle_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="m_vehicle_id" data-fieldname="m_vehicle_id" data-default-width >
+{$m_vehicle_id_value}
+</span>
+{END m_vehicle_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 							</tr>
@@ -1283,7 +1332,7 @@
 	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$m_vehicle_id_class}	"
+		 r-ori-vert		 {$t_booking_user_class}	"
 
 	
 	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_booking_inquiry_list"	
@@ -1307,6 +1356,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_headcell_field13}
+	<td
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$fr_date_class}	"
+
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_booking_inquiry_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_headcell_field13}
 									{BEGIN cellblock_grid_footcell_field3}
 	<td
 	
@@ -1328,7 +1392,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$t_booking_user_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_booking_inquiry_list"	
@@ -1373,7 +1437,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert		 {$m_vehicle_id_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_booking_inquiry_list"	

@@ -157,7 +157,7 @@ pdfDocument = {
 			{"text":{$Voucher_pdfvalue},"hidden":"{$item_hide_export_field16}"},
 				
 				
-			{"text":{$flag_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+			{"text":{$fr_date_pdfvalue},"hidden":"{$item_hide_export_field18}"},
 				
 		  ],
   "border": [ false, false, false, false ],

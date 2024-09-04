@@ -134,7 +134,7 @@ if( $pages[PAGE_EDIT] ) {
 
 if( $pages[PAGE_ADD] ) {
 $tdatat_booking[".add"] = true;
-$tdatat_booking[".afterAddAction"] = 5;
+$tdatat_booking[".afterAddAction"] = 3;
 $tdatat_booking[".closePopupAfterAdd"] = 1;
 $tdatat_booking[".afterAddActionDetTable"] = "m_disposition";
 }
@@ -2193,7 +2193,7 @@ $tdatat_booking[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2203,6 +2203,34 @@ $tdatat_booking[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "m_vehicle";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "m_vehicle_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "m_vehicle_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -2217,17 +2245,14 @@ $tdatat_booking[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -2247,7 +2272,7 @@ $tdatat_booking[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

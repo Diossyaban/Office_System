@@ -183,6 +183,12 @@ if( $eventId == 'invoice_term_event' && "t_invoice" == $table )
 	$cipherer = new RunnerCipherer("t_invoice");
 	fieldEventHandler_invoice_term_event( $params );
 }
+if( $eventId == 't_meeting_total_participant_event' && "t_meeting_book" == $table )
+{
+	require_once("include/t_meeting_book_variables.php");
+	$cipherer = new RunnerCipherer("t_meeting_book");
+	fieldEventHandler_t_meeting_total_participant_event( $params );
+}
 
 
 
@@ -1040,6 +1046,33 @@ function fieldEventHandler_invoice_term_event( $params )
 // Sample:
 $data = $ajax->getCurrentRecord();
 $result['term'] = $data["t_invoice_term_days"];;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_t_meeting_total_participant_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	$_SESSION["peserta"] = $params["value"];
+$result["upper"] = $_SESSION["peserta"];;
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );

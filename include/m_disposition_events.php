@@ -69,13 +69,13 @@ $userName = Security::getUserName();
 $lastUser = $data['t_disposition_to'];
 
 if($userName == $lastUser){
-	$pageObject->hideItem("add", $recordId);
-}else{
 	$pageObject->showItem("add", $recordId);
+}else{
+	$pageObject->hideItem("add", $recordId);
+
 
 }
-// Place event code here.
-// Use "Add Action" button to add code snippets.
+
 ;
 } // function BeforeMoveNextList
 
@@ -156,6 +156,8 @@ if($userName == $lastUser){
 
 }else{
 	$pageObject->showItem("add");
+
+
 
 }
 
@@ -376,19 +378,19 @@ $bookingid = $values['t_booking_id'];
 $statusText = '';
 
 switch ($disposisi) {
-    case 35:
+    case 41:
         $statusText = 'Draft';
         break;
-    case 36:
+    case 42:
         $statusText = 'Follow Up';
         break;
-    case 37:
+    case 43:
         $statusText = 'Approve';
         break;
-    case 38:
+    case 44:
         $statusText = 'Decline';
         break;
-    case 39:
+    case 45:
         $statusText = 'Cancelled';
         break;
     default:
@@ -396,14 +398,14 @@ switch ($disposisi) {
         break;
 }
 
-$message = "You receive a disposition from " . $dispo;
+$message = "You have received a disposition from " . $dispo;
 $title = "[T-Booking] Booking Notification";
 $icon = "fa-envelope";
 $url = "t_booking_view.php?editid1=" . $ticketId;
 $expire = 1440;
 $newWindow = false;
 
-if ($disposisi == 37) {
+if ($disposisi == 43) {
 		
     $sql = "UPDATE t_booking SET flag = 1 WHERE t_booking_id = " . intval($bookingid);
     CustomQuery($sql);
@@ -413,10 +415,10 @@ if ($disposisi == 37) {
 
     $from = "no-reply@talisman.co.id";
     $msgTo = "Dear " . $values["t_disposition_to"] . ",\n\n" .
-             "You have received a disposition from Booking Application with the following details:\n\n" .
-             "From              : " . $dispo . "\n" .    
-             "Disposition Status: " . $statusText . "\n" .
-             "Disposition Date  : " . $tglInput . "\n\n" .
+             "You have received a disposition from the Booking Application with the following details:\n\n" .
+             "From                : " . $dispo . "\n" .    
+             "Disposition Status  : " . $statusText . "\n" .
+             "Disposition Date    : " . $tglInput . "\n" .
              "Disposition Description: " . $values['t_disposition_desc'] . "\n\n" .
              "Thank you,\n";
     $subjectTo = "[T-Booking] Disposition Notification";
@@ -428,10 +430,10 @@ if ($disposisi == 37) {
 
     $msgGA = "Dear Selvia Apriyani,\n\n" .
              "You have a car reservation that has been approved with the following details:\n\n" .
-             "From              : " . $dispo . "\n" .    
-             "Disposition Status: " . $statusText . "\n" .
-             "Disposition Date  : " . $tglInput . "\n\n" .
-             "Disposition Description: " . $values['t_disposition_desc'] . "\n\n" .
+             "From                : " . $dispo . "\n" .    
+             "Disposition Status  : " . $statusText . "\n" .
+             "Disposition Date    : " . $tglInput . "\n" .
+             "Message             : " . $values['t_disposition_desc'] . "\n\n" .
              "Thank you,\n";
     $subjectGA = "[T-Booking] Booking Notification";
     $emailGA = "ichwaldi.dios@talisman.co.id";
@@ -445,10 +447,10 @@ if ($disposisi == 37) {
 
     $from = "no-reply@talisman.co.id";
     $msg = "Dear " . $values["t_disposition_to"] . ",\n\n" .
-           "You have received a disposition from Booking Application with the following details:\n\n" .
-           "From              : " . $dispo . "\n" .    
-           "Disposition Status: " . $statusText . "\n" .
-           "Disposition Date  : " . $tglInput . "\n\n" .
+           "You have received a disposition from the Booking Application with the following details:\n\n" .
+           "From                : " . $dispo . "\n" .    
+           "Disposition Status  : " . $statusText . "\n" .
+           "Disposition Date    : " . $tglInput . "\n" .
            "Disposition Description: " . $values['t_disposition_desc'] . "\n\n" .
            "Thank you,\n";
     $subject = "[T-Booking] Disposition Notification";

@@ -1157,22 +1157,22 @@ if ($value == "Followup") {
 				if($table=="m_disposition" && $field=="t_disposition_status")
 	{
 		switch ($value) {
-    case "35":
+    case "41":
         $value = "<span class='label label-default'>Draft</span>";
         break;
-    case "36":
+    case "42":
         $value = "<span class='label label-default'>Follow Up</span>";
         break;
-    case "37":
+    case "43":
         $value = "<span class='label label-default'>Approve</span>";
         break;
-    case "38":
+    case "44":
         $value = "<span class='label label-default'>Decline</span>";
         break;
-    case "39":
+    case "45":
         $value = "<span class='label label-default'>Cancelled</span>";
         break;
-    case "40":
+    case "46":
         $value = "<span class='label label-default'>Proceed</span>";
         break;
     default:
@@ -1180,7 +1180,13 @@ if ($value == "Followup") {
         $value = "<span class='label label-default'>Unknown</span>";
         break;
 }
-;
+
+//'41', 'Draft', 'carbook', '1'
+//'42', 'Follow Up', 'carbook', '2'
+//'43', 'Approve', 'carbook', '3'
+//'44', 'Decline', 'carbook', '3'
+//'45', 'Cancelled', 'carbook', '4'
+//'46', 'Proceed', 'carbook', '4';
 		return $value;
 	}
 				if($table=="t_meeting_book_approval" && $field=="meet_approve")

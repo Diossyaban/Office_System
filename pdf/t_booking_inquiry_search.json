@@ -219,6 +219,9 @@ pdfDocument = {
 				
 			{"text":{$flag_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
 				
+				
+			{"text":{$fr_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

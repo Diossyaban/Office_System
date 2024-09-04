@@ -55,6 +55,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsm_disposition["English"]["t_disposition_no_doc"] = "T Disposition No Doc";
 	$fieldToolTipsm_disposition["English"]["t_disposition_no_doc"] = "";
 	$placeHoldersm_disposition["English"]["t_disposition_no_doc"] = "";
+	$pageTitlesm_disposition["English"]["list"] = "";
 	if (count($fieldToolTipsm_disposition["English"]))
 		$tdatam_disposition[".isUseToolTips"] = true;
 }
@@ -1012,7 +1013,7 @@ $tdatam_disposition[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1022,6 +1023,34 @@ $tdatam_disposition[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "sp_disposition_flow";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "kodeuser";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "kodeuser";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1036,11 +1065,8 @@ $tdatam_disposition[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=45";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1066,7 +1092,7 @@ $tdatam_disposition[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1450,7 +1476,7 @@ $tdatam_disposition[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "stat";
 
 	
 	

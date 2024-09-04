@@ -91,6 +91,9 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -266,7 +269,7 @@ pdfDocument = {
 	cellId: 'headcell_field2',
 	col:0,
 	row:0,
-			fieldName: 'm_vehicle_id',
+			fieldName: 't_booking_user',
 				style: 'headcell',
 		
 		
@@ -280,11 +283,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel t_booking_inquiry m_vehicle_id }","hidden":"{$item_hide_grid_field_label}","bold":true},
+			{"text":"{$jslabel t_booking_inquiry t_booking_user }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$m_vehicle_id_align}',
+              "alignment": '{$t_booking_user_align}',
      
       
       },
@@ -319,6 +322,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			fieldName: 'fr_date',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel t_booking_inquiry fr_date }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$fr_date_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field11}
 																							{BEGIN cellblock_grid_headcell_field3}
 {
 	cellId: 'headcell_field3',
@@ -353,7 +385,6 @@ pdfDocument = {
 	cellId: 'headcell_field4',
 	col:0,
 	row:0,
-			fieldName: 't_booking_user',
 				style: 'headcell',
 		
 		
@@ -366,12 +397,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$jslabel t_booking_inquiry t_booking_user }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$t_booking_user_align}',
+              "alignment": 'left',
      
       
       },
@@ -440,6 +469,7 @@ pdfDocument = {
 	cellId: 'headcell_field7',
 	col:0,
 	row:0,
+			fieldName: 'm_vehicle_id',
 				style: 'headcell',
 		
 		
@@ -452,10 +482,12 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$jslabel t_booking_inquiry m_vehicle_id }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$m_vehicle_id_align}',
      
       
       },
@@ -534,7 +566,7 @@ pdfDocument = {
 	cellId: 'headcell_field8',
 	col:0,
 	row:0,
-			fieldName: 'm_vehicle_id',
+			fieldName: 't_booking_user',
 				style: 'bodycell',
 		
 		
@@ -548,11 +580,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$m_vehicle_id_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+			{"text":{$t_booking_user_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$m_vehicle_id_align}',
+              "alignment": '{$t_booking_user_align}',
      
       
       },
@@ -593,6 +625,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_headcell_field12}
+{
+	cellId: 'headcell_field12',
+	col:0,
+	row:0,
+			fieldName: 'fr_date',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$fr_date_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$fr_date_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field12}
 																							{BEGIN cellblock_grid_cell_field3}
 {
 	cellId: 'cell_field3',
@@ -627,7 +688,6 @@ pdfDocument = {
 	cellId: 'cell_field4',
 	col:0,
 	row:0,
-			fieldName: 't_booking_user',
 				style: 'bodycell',
 		
 		
@@ -640,12 +700,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$t_booking_user_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$t_booking_user_align}',
+              "alignment": 'left',
      
       
       },
@@ -714,6 +772,7 @@ pdfDocument = {
 	cellId: 'cell_field2',
 	col:0,
 	row:0,
+			fieldName: 'm_vehicle_id',
 				style: 'bodycell',
 		
 		
@@ -726,10 +785,12 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":{$m_vehicle_id_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$m_vehicle_id_align}',
      
       
       },
@@ -848,6 +909,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
 																							{BEGIN cellblock_grid_footcell_field3}
 {
 	cellId: 'footcell_field3',

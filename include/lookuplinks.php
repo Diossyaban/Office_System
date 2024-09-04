@@ -481,6 +481,13 @@ function InitLookupLinks()
 			$lookupTableLinks["m_ticket_subcategory"]["t_ticket.catSubId"] = array();
 		}
 		$lookupTableLinks["m_ticket_subcategory"]["t_ticket.catSubId"]["edit"] = array("table" => "t_ticket", "field" => "catSubId", "page" => "edit");
+		if( !isset( $lookupTableLinks["m_vehicle"] ) ) {
+			$lookupTableLinks["m_vehicle"] = array();
+		}
+		if( !isset( $lookupTableLinks["m_vehicle"]["t_booking.m_vehicle_id"] )) {
+			$lookupTableLinks["m_vehicle"]["t_booking.m_vehicle_id"] = array();
+		}
+		$lookupTableLinks["m_vehicle"]["t_booking.m_vehicle_id"]["edit"] = array("table" => "t_booking", "field" => "m_vehicle_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["m_login"] ) ) {
 			$lookupTableLinks["m_login"] = array();
 		}
@@ -516,6 +523,13 @@ function InitLookupLinks()
 			$lookupTableLinks["m_participant_type"]["t_meeting_book.t_meeting_participant_type"] = array();
 		}
 		$lookupTableLinks["m_participant_type"]["t_meeting_book.t_meeting_participant_type"]["edit"] = array("table" => "t_meeting_book", "field" => "t_meeting_participant_type", "page" => "edit");
+		if( !isset( $lookupTableLinks["sp_disposition_flow"] ) ) {
+			$lookupTableLinks["sp_disposition_flow"] = array();
+		}
+		if( !isset( $lookupTableLinks["sp_disposition_flow"]["m_disposition.t_disposition_to"] )) {
+			$lookupTableLinks["sp_disposition_flow"]["m_disposition.t_disposition_to"] = array();
+		}
+		$lookupTableLinks["sp_disposition_flow"]["m_disposition.t_disposition_to"]["edit"] = array("table" => "m_disposition", "field" => "t_disposition_to", "page" => "edit");
 		if( !isset( $lookupTableLinks["disposisiBookingView"] ) ) {
 			$lookupTableLinks["disposisiBookingView"] = array();
 		}
@@ -530,6 +544,13 @@ function InitLookupLinks()
 			$lookupTableLinks["m_meeting_room"]["t_meeting_book_approval.t_meeting_roomid"] = array();
 		}
 		$lookupTableLinks["m_meeting_room"]["t_meeting_book_approval.t_meeting_roomid"]["edit"] = array("table" => "t_meeting_book_approval", "field" => "t_meeting_roomid", "page" => "edit");
+		if( !isset( $lookupTableLinks["m_vehicle"] ) ) {
+			$lookupTableLinks["m_vehicle"] = array();
+		}
+		if( !isset( $lookupTableLinks["m_vehicle"]["t_booking_inquiry.m_vehicle_id"] )) {
+			$lookupTableLinks["m_vehicle"]["t_booking_inquiry.m_vehicle_id"] = array();
+		}
+		$lookupTableLinks["m_vehicle"]["t_booking_inquiry.m_vehicle_id"]["edit"] = array("table" => "t_booking_inquiry", "field" => "m_vehicle_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["m_vehicle"] ) ) {
 			$lookupTableLinks["m_vehicle"] = array();
 		}

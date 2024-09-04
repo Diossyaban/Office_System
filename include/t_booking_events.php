@@ -136,7 +136,7 @@ $data["t_disposition_to_date"] = date('Y-m-d H:i:s');
 $data["t_disposition_to"] = $userData = Security::getUserName();
 $data["t_disposition_to_date"] = $values['t_booking_from_date'];
 $data["t_disposition_desc"] = "- New T-Booking Registraion -";
-$data["t_disposition_status"] = 35;
+$data["t_disposition_status"] = 41;
 DB::Insert("m_disposition", $data );
 
 
