@@ -82,6 +82,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelst_booking_approval["English"]["fr_date"] = "Day";
 	$fieldToolTipst_booking_approval["English"]["fr_date"] = "";
 	$placeHolderst_booking_approval["English"]["fr_date"] = "";
+	$pageTitlest_booking_approval["English"]["add"] = "";
+	$pageTitlest_booking_approval["English"]["edit"] = "";
+	$pageTitlest_booking_approval["English"]["view"] = "";
 	if (count($fieldToolTipst_booking_approval["English"]))
 		$tdatat_booking_approval[".isUseToolTips"] = true;
 }
@@ -251,11 +254,22 @@ $tdatat_booking_approval[".strOrderBy"] = $tstrOrderBy;
 $tdatat_booking_approval[".orderindexes"] = array();
 
 
-$tdatat_booking_approval[".sqlHead"] = "SELECT t_booking_id,  	t_booking_no,  	t_booking_from_date,  	t_booking_to_date,  	t_booking_from_time,  	t_booking_to_time,  	t_booking_destination,  	t_booking_remarks,  	add_user,  	add_date,  	edit_user,  	edit_date,  	t_booking_status,  	m_vehicle_id,  	t_booking_user,  	m_vehicle_driver,  	Voucher,  DATE(t_booking_from_date) AS fr_date,  	flag";
+$tdatat_booking_approval[".sqlHead"] = "SELECT t_booking_id,  t_booking_no,  t_booking_from_date,  t_booking_to_date,  t_booking_from_time,  t_booking_to_time,  t_booking_destination,  t_booking_remarks,  add_user,  add_date,  edit_user,  edit_date,  t_booking_status,  m_vehicle_id,  t_booking_user,  m_vehicle_driver,  Voucher,  DATE(t_booking_from_date) AS fr_date,  flag";
 $tdatat_booking_approval[".sqlFrom"] = "FROM t_booking";
-$tdatat_booking_approval[".sqlWhereExpr"] = "flag = 1";
+$tdatat_booking_approval[".sqlWhereExpr"] = "(flag =1)";
 $tdatat_booking_approval[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatat_booking_approval[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -2513,7 +2527,8 @@ $tdatat_booking_approval[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "m_vehicle_driver";
 
-	
+				$edata["LookupWhere"] = "m_vehicle_driver is not null";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -3085,15 +3100,15 @@ function createSqlQuery_t_booking_approval()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "t_booking_id,  	t_booking_no,  	t_booking_from_date,  	t_booking_to_date,  	t_booking_from_time,  	t_booking_to_time,  	t_booking_destination,  	t_booking_remarks,  	add_user,  	add_date,  	edit_user,  	edit_date,  	t_booking_status,  	m_vehicle_id,  	t_booking_user,  	m_vehicle_driver,  	Voucher,  DATE(t_booking_from_date) AS fr_date,  	flag";
+$proto0["m_strFieldList"] = "t_booking_id,  t_booking_no,  t_booking_from_date,  t_booking_to_date,  t_booking_from_time,  t_booking_to_time,  t_booking_destination,  t_booking_remarks,  add_user,  add_date,  edit_user,  edit_date,  t_booking_status,  m_vehicle_id,  t_booking_user,  m_vehicle_driver,  Voucher,  DATE(t_booking_from_date) AS fr_date,  flag";
 $proto0["m_strFrom"] = "FROM t_booking";
-$proto0["m_strWhere"] = "flag = 1";
+$proto0["m_strWhere"] = "(flag =1)";
 $proto0["m_strOrderBy"] = "";
 	
 				;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "flag = 1";
+$proto2["m_sql"] = "flag =1";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "flag",
@@ -3103,7 +3118,7 @@ $proto2["m_uniontype"] = "SQLL_UNKNOWN";
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "= 1";
+$proto2["m_strCase"] = "=1";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;

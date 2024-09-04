@@ -6,11 +6,11 @@ $tdatam_disposition_type[".OwnerID"] = "";
 $tdatam_disposition_type[".OriginalTable"] = "m_disposition_type";
 
 
-$tdatam_disposition_type[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatam_disposition_type[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatam_disposition_type[".originalPagesByType"] = $tdatam_disposition_type[".pagesByType"];
-$tdatam_disposition_type[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatam_disposition_type[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatam_disposition_type[".originalPages"] = $tdatam_disposition_type[".pages"];
-$tdatam_disposition_type[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatam_disposition_type[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatam_disposition_type[".originalDefaultPages"] = $tdatam_disposition_type[".defaultPages"];
 
 //	field labels
@@ -527,6 +527,36 @@ changeTextControlsToDate( "m_disposition_type" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["m_disposition_type"] = array();
+//	m_status
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="m_status";
+		$detailsParam["dOriginalTable"] = "m_status";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "m_status";
+	$detailsParam["dCaptionTable"] = GetTableCaption("m_status");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["m_disposition_type"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["m_disposition_type"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["m_disposition_type"][$dIndex]["masterKeys"][]="m_disposition_type_name";
+
+				$detailsTablesData["m_disposition_type"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["m_disposition_type"][$dIndex]["detailKeys"][]="m_status_desc";
 //endif
 
 // tables which are master tables for current table (detail)

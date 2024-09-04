@@ -85,6 +85,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelst_booking["English"]["to_dt"] = "End";
 	$fieldToolTipst_booking["English"]["to_dt"] = "";
 	$placeHolderst_booking["English"]["to_dt"] = "";
+	$pageTitlest_booking["English"]["add"] = "";
+	$pageTitlest_booking["English"]["edit"] = "";
+	$pageTitlest_booking["English"]["view"] = "";
 	if (count($fieldToolTipst_booking["English"]))
 		$tdatat_booking[".isUseToolTips"] = true;
 }

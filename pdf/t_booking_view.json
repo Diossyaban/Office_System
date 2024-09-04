@@ -101,8 +101,16 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_adminarea_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_changepassword_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_notifications}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -174,7 +182,7 @@ pdfDocument = {
 			location: 'section',
 			widths: ['*'],
 			body: [
-				[{text: 'New Section', style: 'tableHeader'}],
+				[{text: '', style: 'tableHeader'}],
 				[{
 					table: {
 						tableForm: true,
@@ -551,7 +559,7 @@ pdfDocument = {
 			location: 'section1',
 			widths: ['*'],
 			body: [
-				[{text: 'New Section1', style: 'tableHeader'}],
+				[{text: '', style: 'tableHeader'}],
 				[{
 					table: {
 						tableForm: true,

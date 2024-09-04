@@ -63,17 +63,12 @@
 function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 {
 
-		
-//$userName = $_SESSION["userId"];
-$userName = Security::getUserName();
-$lastUser = $data['t_disposition_to'];
+		$lastUser = $data['t_disposition_to'];
 
-if($userName == $lastUser){
-	$pageObject->showItem("add", $recordId);
-}else{
-	$pageObject->hideItem("add", $recordId);
-
-
+if ($lastUser) {
+    $pageObject->showItem("add", $recordId);
+} else {
+    $pageObject->hideItem("add", $recordId);
 }
 
 ;
@@ -146,21 +141,15 @@ if($userName == $lastUser){
 function BeforeProcessRowList(&$data, $pageObject)
 {
 
-		//$userName = $_SESSION["userId"];
-$userName = Security::getUserName();
-$lastUser = $data['t_disposition_to'];
+		$userName = $_SESSION["userId"];
 $pageObject->hideItem("delete");
+$lastUser = $data['t_disposition_to'];
 
-if($userName == $lastUser){
-	$pageObject->hideItem("add");
-
-}else{
+if ($lastUser) {
 	$pageObject->showItem("add");
-
-
-
+}else{
+	$pageObject->hideItem("add");
 }
-
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
@@ -377,6 +366,16 @@ $dispo = $values['t_disposition_from'];
 $bookingid = $values['t_booking_id'];
 $statusText = '';
 
+//tag html tabel di php dalam format echo php 
+$rs = DB::Query("SELECT * FROM t_booking WHERE t_booking_id = '$ticketId'");
+$data = $rs->fetchAssoc();
+if($data) {
+    $t_booking_destination = $data['t_booking_destination'];
+    $t_booking_remarks = $data['t_booking_remarks'];
+    $t_booking_user = $data['t_booking_user'];
+
+} else {
+}
 switch ($disposisi) {
     case 41:
         $statusText = 'Draft';
@@ -398,7 +397,7 @@ switch ($disposisi) {
         break;
 }
 
-$message = "You have received a disposition from " . $dispo;
+$message = "You receive a disposition from " . $dispo;
 $title = "[T-Booking] Booking Notification";
 $icon = "fa-envelope";
 $url = "t_booking_view.php?editid1=" . $ticketId;
@@ -407,18 +406,17 @@ $newWindow = false;
 
 if ($disposisi == 43) {
 		
-    $sql = "UPDATE t_booking SET flag = 1 WHERE t_booking_id = " . intval($bookingid);
+    $sql = "UPDATE t_booking SET flag = 1 WHERE t_booking_id = " . $ticketId;
     CustomQuery($sql);
 		
     $permissions = $values["t_disposition_to"] . ",selvia.apriyani";
     addNotification($message, $title, $icon, $url, $expire, $permissions, $newWindow);
-
     $from = "no-reply@talisman.co.id";
     $msgTo = "Dear " . $values["t_disposition_to"] . ",\n\n" .
-             "You have received a disposition from the Booking Application with the following details:\n\n" .
-             "From                : " . $dispo . "\n" .    
-             "Disposition Status  : " . $statusText . "\n" .
-             "Disposition Date    : " . $tglInput . "\n" .
+             "You have received a disposition from Booking Application with the following details:\n\n" .
+             "From              : " . $t_booking_user . "\n" .    
+             "Disposition Status: " . $statusText . "\n" .
+             "Disposition Date  : " . $tglInput . "\n\n" .
              "Disposition Description: " . $values['t_disposition_desc'] . "\n\n" .
              "Thank you,\n";
     $subjectTo = "[T-Booking] Disposition Notification";
@@ -427,14 +425,15 @@ if ($disposisi == 43) {
     if (!$retTo["mailed"]) {
         echo $retTo["message"];
     }
-
-    $msgGA = "Dear Selvia Apriyani,\n\n" .
-             "You have a car reservation that has been approved with the following details:\n\n" .
-             "From                : " . $dispo . "\n" .    
-             "Disposition Status  : " . $statusText . "\n" .
-             "Disposition Date    : " . $tglInput . "\n" .
-             "Message             : " . $values['t_disposition_desc'] . "\n\n" .
-             "Thank you,\n";
+$msgGA = "Dear Selvia Apriyani,\n\n" .
+         "You have a car reservation that has been approved with the following details:\n\n" .
+         "From              : " . $dispo . "\n" .    
+         "Status: " . $statusText . "\n" .
+         "Disposition Date  : " . $tglInput . "\n\n" .
+         "Address  : " . $t_booking_destination . "\n" .
+         "Remarks  : " . $t_booking_remarks . "\n\n" .
+         "Remarks  : " . $t_booking_remarks . "\n\n" .
+         "Thank you,\n";
     $subjectGA = "[T-Booking] Booking Notification";
     $emailGA = "ichwaldi.dios@talisman.co.id";
     $retGA = runner_mail(array('to' => $emailGA, 'subject' => $subjectGA, 'body' => $msgGA, 'from' => $from));
@@ -447,10 +446,10 @@ if ($disposisi == 43) {
 
     $from = "no-reply@talisman.co.id";
     $msg = "Dear " . $values["t_disposition_to"] . ",\n\n" .
-           "You have received a disposition from the Booking Application with the following details:\n\n" .
-           "From                : " . $dispo . "\n" .    
-           "Disposition Status  : " . $statusText . "\n" .
-           "Disposition Date    : " . $tglInput . "\n" .
+           "You have received a disposition from Booking Application with the following details:\n\n" .
+           "From              : " . $dispo . "\n" .    
+           "Disposition Status: " . $statusText . "\n" .
+           "Disposition Date  : " . $tglInput . "\n\n" .
            "Disposition Description: " . $values['t_disposition_desc'] . "\n\n" .
            "Thank you,\n";
     $subject = "[T-Booking] Disposition Notification";

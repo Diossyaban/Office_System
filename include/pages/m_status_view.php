@@ -1,5 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'master' => array( 'm_disposition_type' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'm_status_id',
 'status',
 'm_status_desc',

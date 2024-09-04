@@ -1,5 +1,6 @@
 <?php
-			$optionsArray = array( 'captcha' => array( 'captcha' => false ),
+			$optionsArray = array( 'master' => array( 'm_disposition_type' => array( 'preview' => false ) ),
+'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'status',
 'm_status_desc',
 'm_status_basic_flag' ),

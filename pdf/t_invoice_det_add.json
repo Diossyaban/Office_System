@@ -110,6 +110,37 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_adminarea_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_changepassword_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_notifications}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
 		
 		]
 	}

@@ -134,7 +134,7 @@ $tdatam_status[".isUseAjaxSuggest"] = true;
 
 
 
-																																																			
+																																																																																																						
 
 $tdatam_status[".ajaxCodeSnippetAdded"] = false;
 
@@ -146,7 +146,7 @@ $tdatam_status[".addPageEvents"] = false;
 $tdatam_status[".isUseTimeForSearch"] = false;
 
 
-$tdatam_status[".badgeColor"] = "E8926F";
+$tdatam_status[".badgeColor"] = "e8926f";
 
 
 $tdatam_status[".allSearchFields"] = array();
@@ -818,6 +818,24 @@ $masterTablesData["m_status"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="m_disposition_type";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="m_disposition_type";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "m_disposition_type";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["m_status"][0] = $masterParams;
+				$masterTablesData["m_status"][0]["masterKeys"] = array();
+	$masterTablesData["m_status"][0]["masterKeys"][]="m_disposition_type_name";
+				$masterTablesData["m_status"][0]["detailKeys"] = array();
+	$masterTablesData["m_status"][0]["detailKeys"][]="m_status_desc";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

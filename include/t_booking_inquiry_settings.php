@@ -251,7 +251,7 @@ $tdatat_booking_inquiry[".strOrderBy"] = $tstrOrderBy;
 $tdatat_booking_inquiry[".orderindexes"] = array();
 
 
-$tdatat_booking_inquiry[".sqlHead"] = "SELECT t_booking_id,  	t_booking_no,  	t_booking_from_date,  	t_booking_to_date,  	t_booking_from_time,  	t_booking_to_time,  	t_booking_destination,  	t_booking_remarks,  	add_user,  	add_date,  	edit_user,  	edit_date,  	t_booking_status,  	m_vehicle_id,  	t_booking_user,  	m_vehicle_driver,  	Voucher,  DATE(t_booking_from_date) AS fr_date,    	flag";
+$tdatat_booking_inquiry[".sqlHead"] = "SELECT t_booking_id,  t_booking_no,  t_booking_from_date,  t_booking_to_date,  t_booking_from_time,  t_booking_to_time,  t_booking_destination,  t_booking_remarks,  add_user,  add_date,  edit_user,  edit_date,  t_booking_status,  m_vehicle_id,  t_booking_user,  m_vehicle_driver,  Voucher,  DATE(t_booking_from_date) AS fr_date,  flag";
 $tdatat_booking_inquiry[".sqlFrom"] = "FROM t_booking";
 $tdatat_booking_inquiry[".sqlWhereExpr"] = "";
 $tdatat_booking_inquiry[".sqlTail"] = "";
@@ -3060,7 +3060,7 @@ function createSqlQuery_t_booking_inquiry()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "t_booking_id,  	t_booking_no,  	t_booking_from_date,  	t_booking_to_date,  	t_booking_from_time,  	t_booking_to_time,  	t_booking_destination,  	t_booking_remarks,  	add_user,  	add_date,  	edit_user,  	edit_date,  	t_booking_status,  	m_vehicle_id,  	t_booking_user,  	m_vehicle_driver,  	Voucher,  DATE(t_booking_from_date) AS fr_date,    	flag";
+$proto0["m_strFieldList"] = "t_booking_id,  t_booking_no,  t_booking_from_date,  t_booking_to_date,  t_booking_from_time,  t_booking_to_time,  t_booking_destination,  t_booking_remarks,  add_user,  add_date,  edit_user,  edit_date,  t_booking_status,  m_vehicle_id,  t_booking_user,  m_vehicle_driver,  Voucher,  DATE(t_booking_from_date) AS fr_date,  flag";
 $proto0["m_strFrom"] = "FROM t_booking";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";

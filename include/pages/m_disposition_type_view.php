@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'm_status' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'm_disposition_type_id',
 'm_disposition_type_name' ),
 'searchRequiredFields' => array(  ),

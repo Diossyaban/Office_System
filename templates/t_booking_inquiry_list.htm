@@ -645,7 +645,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="t_booking_inquiry_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="t_booking_inquiry_add.php{$stateLink_full}" data-popup >
 							Add new			</a>
 </span>
 {END add_link}
@@ -1071,7 +1071,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Edit" class="btn btn-default  btn-sm 
-	" href="t_booking_inquiry_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >
+	" href="t_booking_inquiry_edit.php?{$editlink}" {$editlink_attrs} title="Edit" data-popup >
 					<span class="glyphicon glyphicon-pencil"></span>
 							Edit			</a>
 </span>
