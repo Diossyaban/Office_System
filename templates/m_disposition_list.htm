@@ -622,9 +622,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="t_disposition_id"]:before {
-		content: "{$label m_disposition t_disposition_id}";
-	}
 					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="t_disposition_from"]:before {
 		content: "{$label m_disposition t_disposition_from}";
 	}
@@ -692,31 +689,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$t_disposition_id_class}	"
-
-			data-field="t_disposition_id"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN t_disposition_id_fieldheadercolumn}
-	{BEGIN t_disposition_id_fieldheader}
-	<SPAN {$t_disposition_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="t_disposition_id" data-fieldname="t_disposition_id">
-	{$label m_disposition t_disposition_id }	{$arrow_icon_t_disposition_id}
-	</SPAN>
-	{END t_disposition_id_fieldheader}
-{END t_disposition_id_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -867,17 +839,6 @@
 	>
 
 	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="m_disposition_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
-	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Cancel" class="btn-link   
@@ -924,27 +885,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$t_disposition_id_class}	"
-
-			data-field="t_disposition_id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN t_disposition_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="t_disposition_id" data-fieldname="t_disposition_id" data-default-width >
-{$t_disposition_id_value}
-</span>
-{END t_disposition_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -1091,21 +1031,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$t_disposition_id_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="m_disposition_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	

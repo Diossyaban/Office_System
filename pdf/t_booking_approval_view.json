@@ -604,6 +604,9 @@ pdfDocument = {
 		margin: [0,0,0,15],
 	},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel t_booking_approval fr_date }","bold":true},{"text":{$fr_date_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

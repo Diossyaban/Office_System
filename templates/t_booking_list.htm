@@ -737,6 +737,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$fr_date_class}	"
+
+			data-field="fr_date"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fr_date_fieldheadercolumn}
+	{BEGIN fr_date_fieldheader}
+	<SPAN {$fr_date_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fr_date" data-fieldname="fr_date">
+	{$label t_booking fr_date }	{$arrow_icon_fr_date}
+	</SPAN>
+	{END fr_date_fieldheader}
+{END fr_date_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
 									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
@@ -812,31 +837,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$fr_date_class}	"
-
-			data-field="fr_date"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN fr_date_fieldheadercolumn}
-	{BEGIN fr_date_fieldheader}
-	<SPAN {$fr_date_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fr_date" data-fieldname="fr_date">
-	{$label t_booking fr_date }	{$arrow_icon_fr_date}
-	</SPAN>
-	{END fr_date_fieldheader}
-{END fr_date_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
@@ -905,10 +905,10 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="t_booking_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
-				
-								</a>
+	<a type="button" title="Edit" class="btn btn-default  btn-sm 
+	" href="t_booking_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >
+					<span class="glyphicon glyphicon-pencil"></span>
+							Edit			</a>
 </span>
 {END edit_link}
 {END edit_column}
@@ -916,10 +916,10 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="t_booking_view.php?{$editlink}" {$viewlink_attrs} title="View" data-popup >		
-				
-								</a>
+	<a type="button" title="View record" class="btn btn-primary  btn-sm 
+	" href="t_booking_view.php?{$editlink}" {$viewlink_attrs} title="View" data-popup >
+					<span class="glyphicon glyphicon-search"></span>
+							View			</a>
 </span>
 {END view_link}
 {END view_column}
@@ -1000,6 +1000,27 @@
 {END t_booking_to_date_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_headcell_field11}
+	<td
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$fr_date_class}	"
+
+			data-field="fr_date"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fr_date_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fr_date" data-fieldname="fr_date" data-default-width >
+{$fr_date_value}
+</span>
+{END fr_date_fieldcolumn}	
+	</td>
+	{END cellblock_grid_headcell_field11}
 									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
@@ -1063,27 +1084,6 @@
 {END m_vehicle_driver_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$fr_date_class}	"
-
-			data-field="fr_date"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN fr_date_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fr_date" data-fieldname="fr_date" data-default-width >
-{$fr_date_value}
-</span>
-{END fr_date_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
@@ -1191,6 +1191,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_headcell_field12}
+	<td
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$fr_date_class}	"
+
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_booking_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_headcell_field12}
 									{BEGIN cellblock_grid_footcell_field3}
 	<td
 	
@@ -1236,21 +1251,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$fr_date_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_booking_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	

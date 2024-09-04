@@ -682,6 +682,28 @@
 </div>
 
 {END flag_fieldblock}
+											
+{BEGIN fr_date_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fr_date}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fr_date{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="fr_date" data-fieldname="fr_date" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fr_date}">
+		{$label t_booking_approval fr_date }	</label>
+	<div class="r-search-option">
+		{$searchtype_fr_date}
+	</div>
+	<div class="r-search-field">
+		{$fr_date_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fr_date_editcontrol1}
+	</div>
+	
+</div>
+
+{END fr_date_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

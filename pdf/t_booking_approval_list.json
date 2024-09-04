@@ -91,6 +91,12 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -316,6 +322,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'fr_date',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel t_booking_approval fr_date }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$fr_date_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field10}
 																							{BEGIN cellblock_grid_headcell_field3}
 {
 	cellId: 'headcell_field3',
@@ -458,6 +493,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Voucher',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel t_booking_approval Voucher }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Voucher_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
 											],
 				{END row_grid_0}
 		
@@ -590,6 +654,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			fieldName: 'fr_date',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$fr_date_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$fr_date_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field11}
 																							{BEGIN cellblock_grid_cell_field3}
 {
 	cellId: 'cell_field3',
@@ -732,6 +825,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Voucher',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Voucher_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Voucher_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
 											],
 				{END row_grid_1}
 		
@@ -845,6 +967,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_headcell_field12}
+{
+	cellId: 'headcell_field12',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field12}
 																							{BEGIN cellblock_grid_footcell_field3}
 {
 	cellId: 'footcell_field3',
@@ -975,6 +1123,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
+																							{BEGIN cellblock_grid_footcell_field6}
+{
+	cellId: 'footcell_field6',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field6}
 											],
 				{END row_grid_2}
 		

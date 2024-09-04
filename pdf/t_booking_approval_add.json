@@ -473,6 +473,15 @@ pdfDocument = {
 		margin: [0,0,0,15],
 	},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel t_booking_approval m_vehicle_id }","bold":true},{"text":{$m_vehicle_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel t_booking_approval m_vehicle_driver }","bold":true},{"text":{$m_vehicle_driver_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel t_booking_approval Voucher }","bold":true},{"text":{$Voucher_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
