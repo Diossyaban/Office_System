@@ -271,7 +271,7 @@
 		>
 		  <h4 class="panel-title">
 		  				<a role="button" >
-				New Section			</a>
+							</a>
 					  </h4>
 		</div>
 		<div  class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel"  {$section_section1_attrs}
@@ -598,9 +598,8 @@
 								</tr>
 	 
 	 
-		
-						<tr>
-						
+														<tr {$row_section_4} >
+										
 
 {BEGIN cellblock_section_c}
 <td
@@ -614,7 +613,29 @@
 		
 >
 	<div edit-form-cell class="clearfix">
-									</td>
+				
+{BEGIN fr_date_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fr_date}  r-vertical-field" data-fieldname="fr_date" data-signal-error-for="fr_date{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="fr_date" data-fieldname="fr_date" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_fr_date}">
+		
+		{BEGIN fr_date_label}{$label t_booking_inquiry fr_date }{END fr_date_label}
+	</label>
+	<div class="" >
+		{$fr_date_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END fr_date_fieldblock}
+	
+								</td>
 			{END cellblock_section_c}
 			 
 																
@@ -710,7 +731,7 @@
 		>
 		  <h4 class="panel-title">
 		  				<a role="button" >
-				New Section1			</a>
+							</a>
 					  </h4>
 		</div>
 		<div  class="panel-collapse collapse in {$section_section2_xtrclass}" role="tabpanel"  {$section_section2_attrs}
@@ -748,56 +769,8 @@
 		  </div>
 		</div>
 	</div>
-											<table 
-	data-body-align="left"
-	data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" 
-	class="r-edit-form" cellpadding="0" cellspacing="0" 
-	{$grid_hiddenattr} 
-		data-form-width="1"
-		
-		data-v-width="4"
-	>
-	<tbody>
-										<tr {$row_grid_0} >
-										
-
-{BEGIN cellblock_grid_c3}
-<td
-	{$cell_grid_c3}
-	class=" r-ori-vert"
 	
-				data-fullwidth
-		
-			data-cellId="grid_c3" data-pageid="{$pageid}"
-		data-v-cell="4"
-		
->
-	<div edit-form-cell class="clearfix">
-				
-{BEGIN fr_date_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_fr_date}  r-vertical-field" data-fieldname="fr_date" data-signal-error-for="fr_date{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="fr_date" data-fieldname="fr_date" >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fr_date}">
-		
-		{BEGIN fr_date_label}{$label t_booking_inquiry fr_date }{END fr_date_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$fr_date_value}	</div>
-
-		
-</div>
-
-
-{END fr_date_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c3}
-								</tr>
-			</tbody></table>
-{END grid_block}
+				{END grid_block}
 	</div>
 <div class="r-below">
 					{BEGIN below-grid_block}

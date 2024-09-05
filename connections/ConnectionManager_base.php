@@ -349,6 +349,7 @@ class ConnectionManager_Base
 		$connectionsIds["t_booking_approval"] = "u736239518tsundbat154412412";
 		$connectionsIds["m_vehicle"] = "u736239518tsundbat154412412";
 		$connectionsIds["disposisiBookingView"] = "u736239518tsundbat154412412";
+		$connectionsIds["m_employee"] = "u736239518tsundbat154412412";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

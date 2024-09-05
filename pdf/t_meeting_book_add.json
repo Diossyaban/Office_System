@@ -168,7 +168,7 @@ pdfDocument = {
 			location: 'section',
 			widths: ['*'],
 			body: [
-				[{text: 'New Section', style: 'tableHeader'}],
+				[{text: '', style: 'tableHeader'}],
 				[{
 					table: {
 						tableForm: true,

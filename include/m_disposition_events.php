@@ -366,16 +366,15 @@ $dispo = $values['t_disposition_from'];
 $bookingid = $values['t_booking_id'];
 $statusText = '';
 
-//tag html tabel di php dalam format echo php 
 $rs = DB::Query("SELECT * FROM t_booking WHERE t_booking_id = '$ticketId'");
 $data = $rs->fetchAssoc();
-if($data) {
+
+if ($data) {
     $t_booking_destination = $data['t_booking_destination'];
     $t_booking_remarks = $data['t_booking_remarks'];
     $t_booking_user = $data['t_booking_user'];
-
-} else {
 }
+
 switch ($disposisi) {
     case 41:
         $statusText = 'Draft';
@@ -405,38 +404,40 @@ $expire = 1440;
 $newWindow = false;
 
 if ($disposisi == 43) {
-		
     $sql = "UPDATE t_booking SET flag = 1 WHERE t_booking_id = " . $ticketId;
     CustomQuery($sql);
-		
+
     $permissions = $values["t_disposition_to"] . ",selvia.apriyani";
     addNotification($message, $title, $icon, $url, $expire, $permissions, $newWindow);
+
     $from = "no-reply@talisman.co.id";
     $msgTo = "Dear " . $values["t_disposition_to"] . ",\n\n" .
-             "You have received a disposition from Booking Application with the following details:\n\n" .
-             "From              : " . $t_booking_user . "\n" .    
+             "You have received a disposition from the Booking Application with the following details:\n\n" .
+             "From : " . $t_booking_user . "\n" .    
              "Disposition Status: " . $statusText . "\n" .
-             "Disposition Date  : " . $tglInput . "\n\n" .
+             "Disposition Date  : " . $tglInput . "\n" .
              "Disposition Description: " . $values['t_disposition_desc'] . "\n\n" .
              "Thank you,\n";
     $subjectTo = "[T-Booking] Disposition Notification";
     $emailTo = $values['t_disposition_to'] . "@talisman.co.id";
     $retTo = runner_mail(array('to' => $emailTo, 'subject' => $subjectTo, 'body' => $msgTo, 'from' => $from));
+
     if (!$retTo["mailed"]) {
         echo $retTo["message"];
     }
-$msgGA = "Dear Selvia Apriyani,\n\n" .
-         "You have a car reservation that has been approved with the following details:\n\n" .
-         "From              : " . $dispo . "\n" .    
-         "Status: " . $statusText . "\n" .
-         "Disposition Date  : " . $tglInput . "\n\n" .
-         "Address  : " . $t_booking_destination . "\n" .
-         "Remarks  : " . $t_booking_remarks . "\n\n" .
-         "Remarks  : " . $t_booking_remarks . "\n\n" .
-         "Thank you,\n";
+    // Send email to Selvia Apriyani
+    $msgGA = "Dear Selvia Apriyani,\n\n" .
+             "You have a car reservation that has been approved with the following details:\n\n" .
+             "Order by : " . $t_booking_user . "\n" .    
+             "Status   : " . $statusText . "\n" .
+             "Disposition Date  : " . $tglInput . "\n" .
+             "Address  : " . $t_booking_destination . "\n" .
+             "Remarks  : " . $t_booking_remarks . "\n\n" .
+             "Thank you,\n";
     $subjectGA = "[T-Booking] Booking Notification";
     $emailGA = "ichwaldi.dios@talisman.co.id";
     $retGA = runner_mail(array('to' => $emailGA, 'subject' => $subjectGA, 'body' => $msgGA, 'from' => $from));
+
     if (!$retGA["mailed"]) {
         echo $retGA["message"];
     }
@@ -446,7 +447,7 @@ $msgGA = "Dear Selvia Apriyani,\n\n" .
 
     $from = "no-reply@talisman.co.id";
     $msg = "Dear " . $values["t_disposition_to"] . ",\n\n" .
-           "You have received a disposition from Booking Application with the following details:\n\n" .
+           "You have received a disposition from the Booking Application with the following details:\n\n" .
            "From              : " . $dispo . "\n" .    
            "Disposition Status: " . $statusText . "\n" .
            "Disposition Date  : " . $tglInput . "\n\n" .
@@ -455,6 +456,7 @@ $msgGA = "Dear Selvia Apriyani,\n\n" .
     $subject = "[T-Booking] Disposition Notification";
     $email = $values['t_disposition_to'] . "@talisman.co.id";
     $ret = runner_mail(array('to' => $email, 'subject' => $subject, 'body' => $msg, 'from' => $from));
+
     if (!$ret["mailed"]) {
         echo $ret["message"];
     }

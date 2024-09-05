@@ -429,6 +429,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("disposisibookingview" == $shortTName )
 		return true;
+	if ("m_employee" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1496,6 +1498,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="disposisiBookingView";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("m_employee");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="m_employee";
+	}
 	return $arr;
 }
 
@@ -1618,6 +1629,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="t_booking_approval";
 	$arr[]="m_vehicle";
 	$arr[]="disposisiBookingView";
+	$arr[]="m_employee";
 	return $arr;
 }
 
@@ -2810,6 +2822,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="disposisiBookingView" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="m_employee" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

@@ -188,7 +188,7 @@ $tdatat_meeting_book_approval[".ajaxCodeSnippetAdded"] = false;
 
 $tdatat_meeting_book_approval[".buttonsAdded"] = false;
 
-$tdatat_meeting_book_approval[".addPageEvents"] = false;
+$tdatat_meeting_book_approval[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatat_meeting_book_approval[".isUseTimeForSearch"] = false;
@@ -3621,6 +3621,7 @@ $tdatat_meeting_book_approval[".sqlquery"] = $queryData_t_meeting_book_approval;
 
 
 
-$tdatat_meeting_book_approval[".hasEvents"] = false;
+include_once(getabspath("include/t_meeting_book_approval_events.php"));
+$tdatat_meeting_book_approval[".hasEvents"] = true;
 
 ?>

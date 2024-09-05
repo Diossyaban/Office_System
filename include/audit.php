@@ -860,6 +860,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="m_employee")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1671,6 +1675,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="disposisiBookingView")
+		{
+			return false;
+		}
+		if($table=="m_employee")
 		{
 			return false;
 		}

@@ -540,6 +540,34 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["m_meeting_room"] ) ) {
 			$lookupTableLinks["m_meeting_room"] = array();
 		}
+		if( !isset( $lookupTableLinks["m_meeting_room"]["t_meeting_book_inqury.t_meeting_roomid"] )) {
+			$lookupTableLinks["m_meeting_room"]["t_meeting_book_inqury.t_meeting_roomid"] = array();
+		}
+		$lookupTableLinks["m_meeting_room"]["t_meeting_book_inqury.t_meeting_roomid"]["edit"] = array("table" => "t_meeting_book_inqury", "field" => "t_meeting_roomid", "page" => "edit");
+		if( !isset( $lookupTableLinks["m_login"] ) ) {
+			$lookupTableLinks["m_login"] = array();
+		}
+		if( !isset( $lookupTableLinks["m_login"]["t_meeting_book_inqury.t_meeting_user"] )) {
+			$lookupTableLinks["m_login"]["t_meeting_book_inqury.t_meeting_user"] = array();
+		}
+		$lookupTableLinks["m_login"]["t_meeting_book_inqury.t_meeting_user"]["edit"] = array("table" => "t_meeting_book_inqury", "field" => "t_meeting_user", "page" => "edit");
+		if( !isset( $lookupTableLinks["View"] ) ) {
+			$lookupTableLinks["View"] = array();
+		}
+		if( !isset( $lookupTableLinks["View"]["t_meeting_book_inqury.user_participant_list"] )) {
+			$lookupTableLinks["View"]["t_meeting_book_inqury.user_participant_list"] = array();
+		}
+		$lookupTableLinks["View"]["t_meeting_book_inqury.user_participant_list"]["edit"] = array("table" => "t_meeting_book_inqury", "field" => "user_participant_list", "page" => "edit");
+		if( !isset( $lookupTableLinks["m_participant_type"] ) ) {
+			$lookupTableLinks["m_participant_type"] = array();
+		}
+		if( !isset( $lookupTableLinks["m_participant_type"]["t_meeting_book_inqury.t_meeting_participant_type"] )) {
+			$lookupTableLinks["m_participant_type"]["t_meeting_book_inqury.t_meeting_participant_type"] = array();
+		}
+		$lookupTableLinks["m_participant_type"]["t_meeting_book_inqury.t_meeting_participant_type"]["edit"] = array("table" => "t_meeting_book_inqury", "field" => "t_meeting_participant_type", "page" => "edit");
+		if( !isset( $lookupTableLinks["m_meeting_room"] ) ) {
+			$lookupTableLinks["m_meeting_room"] = array();
+		}
 		if( !isset( $lookupTableLinks["m_meeting_room"]["t_meeting_book_approval.t_meeting_roomid"] )) {
 			$lookupTableLinks["m_meeting_room"]["t_meeting_book_approval.t_meeting_roomid"] = array();
 		}
@@ -551,6 +579,13 @@ function InitLookupLinks()
 			$lookupTableLinks["m_vehicle"]["t_booking_inquiry.m_vehicle_id"] = array();
 		}
 		$lookupTableLinks["m_vehicle"]["t_booking_inquiry.m_vehicle_id"]["edit"] = array("table" => "t_booking_inquiry", "field" => "m_vehicle_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["m_login"] ) ) {
+			$lookupTableLinks["m_login"] = array();
+		}
+		if( !isset( $lookupTableLinks["m_login"]["t_booking_inquiry.t_booking_user"] )) {
+			$lookupTableLinks["m_login"]["t_booking_inquiry.t_booking_user"] = array();
+		}
+		$lookupTableLinks["m_login"]["t_booking_inquiry.t_booking_user"]["edit"] = array("table" => "t_booking_inquiry", "field" => "t_booking_user", "page" => "edit");
 		if( !isset( $lookupTableLinks["m_vehicle"] ) ) {
 			$lookupTableLinks["m_vehicle"] = array();
 		}

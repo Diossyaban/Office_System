@@ -202,12 +202,11 @@ $tdatat_meeting_book[".isUseAjaxSuggest"] = true;
 
 
 
-																																												
-								
+																																																			
 
 $tdatat_meeting_book[".ajaxCodeSnippetAdded"] = false;
 
-$tdatat_meeting_book[".buttonsAdded"] = true;
+$tdatat_meeting_book[".buttonsAdded"] = false;
 
 $tdatat_meeting_book[".addPageEvents"] = true;
 
@@ -553,8 +552,7 @@ $tdatat_meeting_book[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "m_meeting_room_name";
 
-				$edata["LookupWhere"] = "(capacity = 18 AND :session.peserta > 10) OR  (capacity = 12 AND :session.peserta > 6 AND :session.peserta <= 12) OR  (capacity = 6 AND :session.peserta > 2 AND :session.peserta <= 6) OR  (capacity = 4 AND :session.peserta <= 4)";
-
+	
 
 	
 	$edata["LookupOrderBy"] = "m_meeting_room_name";
@@ -2055,10 +2053,7 @@ $tdatat_meeting_book[".hideMobileList"] = array();
 
 
 	
-		$eventsData = array();
-	$eventsData[] = array( "name" => "t_meeting_total_participant_event", "type" => "change" );
-	$edata["fieldEvents"] = $eventsData;
-
+	
 
 
 

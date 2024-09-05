@@ -128,6 +128,7 @@ $nonAdminTablesArr[] = "t_booking_inquiry";
 $nonAdminTablesArr[] = "t_booking_approval";
 $nonAdminTablesArr[] = "m_vehicle";
 $nonAdminTablesArr[] = "disposisiBookingView";
+$nonAdminTablesArr[] = "m_employee";
 
 $ug_connection = $cman->getForUserGroups();
 

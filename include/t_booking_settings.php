@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelst_booking["English"]["t_booking_from_date"] = "To Date";
 	$fieldToolTipst_booking["English"]["t_booking_from_date"] = "";
 	$placeHolderst_booking["English"]["t_booking_from_date"] = "";
-	$fieldLabelst_booking["English"]["t_booking_to_date"] = "To Date";
+	$fieldLabelst_booking["English"]["t_booking_to_date"] = "";
 	$fieldToolTipst_booking["English"]["t_booking_to_date"] = "";
 	$placeHolderst_booking["English"]["t_booking_to_date"] = "";
 	$fieldLabelst_booking["English"]["t_booking_from_time"] = "From Time";

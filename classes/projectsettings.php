@@ -3736,6 +3736,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "m_vehicle" ] = "m_vehicle";
 	$projectEntities[ "disposisiBookingView" ] = array( "url" => "disposisibookingview", "type" => 6 );
 	$projectEntitiesReverse[ "disposisibookingview" ] = "disposisiBookingView";
+	$projectEntities[ "m_employee" ] = array( "url" => "m_employee", "type" => 0 );
+	$projectEntitiesReverse[ "m_employee" ] = "m_employee";
 }
 
 function findTable( $table ) {

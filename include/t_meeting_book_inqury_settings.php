@@ -203,7 +203,7 @@ $tdatat_meeting_book_inqury[".ajaxCodeSnippetAdded"] = false;
 
 $tdatat_meeting_book_inqury[".buttonsAdded"] = false;
 
-$tdatat_meeting_book_inqury[".addPageEvents"] = false;
+$tdatat_meeting_book_inqury[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatat_meeting_book_inqury[".isUseTimeForSearch"] = false;
@@ -521,7 +521,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -531,6 +531,34 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "m_meeting_room";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "m_meeting_room_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -545,17 +573,14 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -575,7 +600,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -764,8 +789,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 	
 	
-				$fdata["UploadFolder"] = "files";
-
+			
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
@@ -797,7 +821,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -807,6 +831,35 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "m_login";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "username";
+	$edata["LinkFieldType"] = 200;
+	$edata["DisplayField"] = "fullname";
+
+				$edata["LookupWhere"] = "is_active =1";
+
+
+	
+	$edata["LookupOrderBy"] = "fullname";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -821,11 +874,8 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -851,7 +901,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1075,8 +1125,9 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1095,7 +1146,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -1213,8 +1264,9 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1233,7 +1285,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -1645,7 +1697,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1655,6 +1707,34 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "View";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 2;
+
+	
+		
+	$edata["LinkField"] = "t_employee_email_company";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "t_employee_name";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+		$edata["Multiselect"] = true;
+
+	
+// End Lookup Settings
 
 
 	
@@ -1669,11 +1749,8 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=500";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1699,7 +1776,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1783,7 +1860,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1793,6 +1870,34 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "m_participant_type";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "Type";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Type";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1807,11 +1912,8 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=45";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1837,7 +1939,7 @@ $tdatat_meeting_book_inqury[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -4349,6 +4451,7 @@ $tdatat_meeting_book_inqury[".sqlquery"] = $queryData_t_meeting_book_inqury;
 
 
 
-$tdatat_meeting_book_inqury[".hasEvents"] = false;
+include_once(getabspath("include/t_meeting_book_inqury_events.php"));
+$tdatat_meeting_book_inqury[".hasEvents"] = true;
 
 ?>

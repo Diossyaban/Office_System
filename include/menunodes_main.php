@@ -579,7 +579,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "23";
-	$menuNode["name"] = "Booking";
+	$menuNode["name"] = "e-Booking";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
@@ -598,7 +598,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Booking";
+	$menuNode["title"] = "e-Booking";
 
 
 
@@ -1437,7 +1437,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "56";
-	$menuNode["name"] = "E-Booking";
+	$menuNode["name"] = "e-Booking";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
@@ -1456,7 +1456,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "E-Booking";
+	$menuNode["title"] = "e-Booking";
 
 
 
@@ -1489,10 +1489,10 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "58";
-	$menuNode["name"] = "Inquiry Vehicle";
+	$menuNode["name"] = "Inqury Meeting Room";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "t_booking_inquiry";
+	$menuNode["table"] = "t_meeting_book_inqury";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "56";
@@ -1502,13 +1502,13 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-ambulance";
-	$menuNode["iconType"] = "3";
+	$menuNode["icon"] = "glyphicon-hand-right";
+	$menuNode["iconType"] = "2";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Inquiry Vehicle";
+	$menuNode["title"] = "Inqury Meeting Room";
 
 
 
@@ -1541,10 +1541,10 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "60";
-	$menuNode["name"] = "Inqury Meeting Room";
+	$menuNode["name"] = "Inquiry Vehicle";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "t_meeting_book_inqury";
+	$menuNode["table"] = "t_booking_inquiry";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "56";
@@ -1554,13 +1554,13 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-hand-right";
-	$menuNode["iconType"] = "2";
+	$menuNode["icon"] = "fa-ambulance";
+	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Inqury Meeting Room";
+	$menuNode["title"] = "Inquiry Vehicle";
 
 
 

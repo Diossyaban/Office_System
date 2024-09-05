@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelst_booking_inquiry["English"]["t_booking_from_date"] = "To Date";
 	$fieldToolTipst_booking_inquiry["English"]["t_booking_from_date"] = "";
 	$placeHolderst_booking_inquiry["English"]["t_booking_from_date"] = "";
-	$fieldLabelst_booking_inquiry["English"]["t_booking_to_date"] = "T Booking To Date";
+	$fieldLabelst_booking_inquiry["English"]["t_booking_to_date"] = "";
 	$fieldToolTipst_booking_inquiry["English"]["t_booking_to_date"] = "";
 	$placeHolderst_booking_inquiry["English"]["t_booking_to_date"] = "";
 	$fieldLabelst_booking_inquiry["English"]["t_booking_from_time"] = "T Booking From Time";
@@ -2352,7 +2352,7 @@ $tdatat_booking_inquiry[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2362,6 +2362,34 @@ $tdatat_booking_inquiry[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "m_login";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "email";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "username";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "username";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -2376,11 +2404,8 @@ $tdatat_booking_inquiry[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -2406,7 +2431,7 @@ $tdatat_booking_inquiry[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

@@ -744,9 +744,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "1880_1725355728";
+$projectBuildKey = "1884_1725355728";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "1880";
+$projectBuildNumber = "1884";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -882,6 +882,7 @@ $tableCaptions["English"]["t_booking_inquiry"] = "T Booking Inquiry";
 $tableCaptions["English"]["t_booking_approval"] = "T Booking Approval";
 $tableCaptions["English"]["m_vehicle"] = "M Vehicle";
 $tableCaptions["English"]["disposisiBookingView"] = "Disposisi Booking View";
+$tableCaptions["English"]["m_employee"] = "M Employee";
 
 
 $globalEvents = new class_GlobalEvents;

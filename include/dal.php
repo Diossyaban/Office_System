@@ -62,6 +62,7 @@ class tDAL
 	var $tblu736239518tsundbat154412412__tblm_disposition_type;
 	var $tblu736239518tsundbat154412412__tblm_division;
 	var $tblu736239518tsundbat154412412__tblm_domestic_type;
+	var $tblu736239518tsundbat154412412__tblm_employee;
 	var $tblu736239518tsundbat154412412__tblm_kabupaten;
 	var $tblu736239518tsundbat154412412__tblm_kecamatan;
 	var $tblu736239518tsundbat154412412__tblm_kelurahan;
@@ -135,6 +136,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "m_disposition_type", "varname" => "u736239518tsundbat154412412__tblm_disposition_type", "altvarname" => "tblm_disposition_type", "connId" => "u736239518tsundbat154412412", "schema" => "", "connName" => "u736239518_tsundb at 154.41.24");
 		$this->lstTables[] = array("name" => "m_division", "varname" => "u736239518tsundbat154412412__tblm_division", "altvarname" => "tblm_division", "connId" => "u736239518tsundbat154412412", "schema" => "", "connName" => "u736239518_tsundb at 154.41.24");
 		$this->lstTables[] = array("name" => "m_domestic_type", "varname" => "u736239518tsundbat154412412__tblm_domestic_type", "altvarname" => "tblm_domestic_type", "connId" => "u736239518tsundbat154412412", "schema" => "", "connName" => "u736239518_tsundb at 154.41.24");
+		$this->lstTables[] = array("name" => "m_employee", "varname" => "u736239518tsundbat154412412__tblm_employee", "altvarname" => "tblm_employee", "connId" => "u736239518tsundbat154412412", "schema" => "", "connName" => "u736239518_tsundb at 154.41.24");
 		$this->lstTables[] = array("name" => "m_kabupaten", "varname" => "u736239518tsundbat154412412__tblm_kabupaten", "altvarname" => "tblm_kabupaten", "connId" => "u736239518tsundbat154412412", "schema" => "", "connName" => "u736239518_tsundb at 154.41.24");
 		$this->lstTables[] = array("name" => "m_kecamatan", "varname" => "u736239518tsundbat154412412__tblm_kecamatan", "altvarname" => "tblm_kecamatan", "connId" => "u736239518tsundbat154412412", "schema" => "", "connName" => "u736239518_tsundb at 154.41.24");
 		$this->lstTables[] = array("name" => "m_kelurahan", "varname" => "u736239518tsundbat154412412__tblm_kelurahan", "altvarname" => "tblm_kelurahan", "connId" => "u736239518tsundbat154412412", "schema" => "", "connName" => "u736239518_tsundb at 154.41.24");
